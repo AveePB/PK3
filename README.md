@@ -1,35 +1,39 @@
-# Autonomous Vehicle (AV)
-- <a href="./assets/assembly.md">Assembly Guide</a>
+# Programowanie Komputerów 3 (PK3)
+Repozytorium zawiera ćwiczenia i miniprojekt z przedmiotu PK3
 
-## Table of contents
-1. [Introduction](#introduction)
-2. [Mecanum Wheels Movement](#mecanum-wheels-movement)
-3. [How to use it](#how-to-use-it)
-4. [License](#license)
-5. [Partnership](#partnership)
-   
-## Introduction <a name="introduction"></a>
-This project integrates diverse skills such as IoT, machine learning, and more to create a system where a car is autonomously controlled by a machine learning model. The focus is on showcasing how these technologies can work together to enable intelligent, automated vehicle management.
+## Tematy ćwiczeń
 
-## Mecanum Wheels Movement <a name="mecanum-wheels-movement"></a>
-<img src="./assets/imgs/mecanum-wheel-controls.svg" alt="mecanum-wheel-controls"/>
+### Szablony
+W programowaniu C++, szablony (templates) to potężny mechanizm, który pozwala na pisanie kodu niezależnego od typu danych.
+<a href="./1.Szablony/README.md">Więcej tutaj.</a>
 
-### Description
-A Mecanum wheel is an omnidirectional wheel design for a land-based vehicle to move in any direction. It is sometimes called the Swedish wheel or Ilon wheel after its inventor.
+### Algorytmy, funkcje lambda
+W C++ nie musisz pisać od zera mechanizmów sortowania czy szukania. Biblioteka ```<algorithm>``` dostarcza gotowe, zoptymalizowane funkcje, które działają na kontenerach.
 
-Movements to any directions: blue: wheel drive direction; red: vehicle moving direction. 
-- a) Moving straight ahead, 
-- b) Moving sideways, 
-- c) Moving diagonally, 
-- d) Moving around a bend, 
-- e) Rotation, 
-- f) Rotation around the central point of one axle.
+Lambda to "funkcja w jednej linijce", którą tworzysz dokładnie tam, gdzie jest potrzebna, bez nazywania jej. Jest idealna, gdy chcesz powiedzieć algorytmowi, jak ma coś zrobić.
+<a href="./2.Algorytmy-funckje-lambda/README.md">Więcej tutaj.</a>
 
-## How to use it <a name="how-to-use-it"></a>
+### Iteratory
+Iterator to obiekt, który zachowuje się jak wskaźnik, ale służy do poruszania się po różnych strukturach danych (kontenerach) w sposób jednolity.
+<a href="./3.Iteratory/README.md">Więcej tutaj.</a>
+
+### Kontenery STL
+Kontenery STL (Standard Template Library) to gotowe struktury danych, które służą do przechowywania i organizowania obiektów w pamięci.
+<a href="./4.Kontenery-STL/README.md">Więcej tutaj.</a>
+
+### Opakowanie zasobu klasą 
+To zagadnienie, znane w C++ jako RAII (Resource Acquisition Is Initialization), to jeden z najważniejszych konceptów.
+
+W nowoczesnym C++ rzadko piszemy własne klasy RAII od zera, bo mamy gotowe szablony w bibliotece ```<memory>```. Korzystamy z inteligentnych wskaźników.
+<a href="./5.Opakowanie-zasobu-klasa/README.md">Więcej tutaj.</a>
+
+### Własna implementacja konteneru STL
+Implementacja własnego kontenera w tym projekcie służy do demonstracji mechanizmów niskopoziomowego zarządzania danymi przy jednoczesnym zachowaniu zasad modern C++.
+<a href="./6.Wlasna-implementacja-konteneru-stl/README.md">Więcej tutaj.</a>
+
+## Miniprojekt 
 ...
+<a href="./7.Miniprojekt/README.md">Więcej tutaj.</a>
 
-## License <a name="license"></a>
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Partnership
-Project was founded by <a href="https://www.facebook.com/sknsepgliwice/?locale=pl_PL"> the SKN SEP</a>.
+## Licencja 
+Projekt jest udostępniany na warunkach licencji MIT.
