@@ -11,7 +11,7 @@ W programowaniu C++, szablony (templates) to potężny mechanizm, który pozwala
 W C++ nie musisz pisać od zera mechanizmów sortowania czy szukania. Biblioteka ```<algorithm>``` dostarcza gotowe, zoptymalizowane funkcje, które działają na kontenerach.
 
 Lambda to "funkcja w jednej linijce", którą tworzysz dokładnie tam, gdzie jest potrzebna, bez nazywania jej. Jest idealna, gdy chcesz powiedzieć algorytmowi, jak ma coś zrobić.
-<a href="./2.Algorytmy-funckje-lambda/README.md">Więcej tutaj.</a>
+<a href="./2.Algorytmy-funkcje-lambda/README.md">Więcej tutaj.</a>
 
 ### Iteratory
 Iterator to obiekt, który zachowuje się jak wskaźnik, ale służy do poruszania się po różnych strukturach danych (kontenerach) w sposób jednolity.
