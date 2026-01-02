@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="2.Algorytmy-funkcje-lambda.vcxproj" />
+  <Project Path="2.Algorytmy-funkcje-lambda.vcxproj" Id="dcd08fdf-d83c-40d4-ade4-a00da2bf2720" />
 </Solution>

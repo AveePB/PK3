@@ -24,7 +24,7 @@ namespace mz {
 		/**
 		 * @brief Funkcja wyświetlająca do konsoli parametry obiektu.
 		 */
-		void printToConsole() {
+		void printToConsole() const {
 			std::cout << "Obstacle(id = " << id << ", distance = " << distance << ")\n";
 		}
 	};

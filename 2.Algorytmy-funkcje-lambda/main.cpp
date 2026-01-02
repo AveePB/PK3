@@ -81,7 +81,7 @@ int main() {
 
 	// zad 4
 	// Użyjemy tu znowu wektora z poprzednich zadań
-	std::cout << "Exercise 44\n";
+	std::cout << "Exercise 4\n";
 	std::cout << "Vector: \n";
 	std::for_each(obstacles.begin(), obstacles.end(), [](mz::Obstacle &obs) { obs.printToConsole(); });
 	std::cout << '\n';
@@ -98,6 +98,14 @@ int main() {
 	std::cout << "Vector after conversion: \n";
 	std::for_each(obstacles.begin(), obstacles.end(), [](mz::Obstacle& obs) { obs.printToConsole(); });
 	std::cout << '\n';
+
+	// zad 5
+	// Użyjemy tu znowu wektora z poprzednich zadań
+	std::cout << "Exercise 5\n";
+	std::cout << "Vector: \n";
+	std::for_each(obstacles.begin(), obstacles.end(), [](const mz::Obstacle& obs) { obs.printToConsole(); });
+	std::cout << '\n';
+
 
 	return 0;
 }
