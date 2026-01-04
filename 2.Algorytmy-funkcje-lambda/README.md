@@ -34,7 +34,7 @@ Wykorzystanie algorytmu `std::remove_if` wraz z lambdą w celu oczyszczenia wekt
 Zastosowanie `std::sort` z niestandardowym komparatorem w postaci lambdy, aby uporządkować wykryte przeszkody (klasa `Obstacle`) od najbliższej do najdalszej.
 
 ### Zliczanie zagrożeń (Zadanie 3)
-Użycie `std::count_if` z lambdą **przechwytującą zmienną** `safetyLimit`, aby określić liczbę obiektów znajdujących się w krytycznej odległości od pojazdu.
+Użycie `std::count_if` z lambdą **przechwytującą zmienną** `danger_count`, aby określić liczbę obiektów znajdujących się w krytycznej odległości od pojazdu.
 
 ### Transformacja jednostek (Zadanie 4)
 Użycie `std::transform` do konwersji wszystkich danych w kontenerze (np. zamiana centymetrów na metry) z natychmiastowym nadpisaniem oryginalnych wartości.
