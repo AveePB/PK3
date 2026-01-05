@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Michael\Desktop\PK3\4.Kontenery-STL\main.cpp(121,23): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1252)
+C:\Users\Michael\Desktop\PK3\4.Kontenery-STL\main.cpp(139,25): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1252)
+  4.Kontenery-STL.vcxproj -> C:\Users\Michael\Desktop\PK3\4.Kontenery-STL\x64\Debug\4.Kontenery-STL.exe
