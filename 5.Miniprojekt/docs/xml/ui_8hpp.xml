@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="ui_8hpp" kind="file" language="C++">
+    <compoundname>ui.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="ui_8cpp" local="yes">src/ui.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/ui.hpp</label>
+        <link refid="ui_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/ui.cpp</label>
+        <link refid="ui_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/ui.hpp</label>
+        <link refid="ui_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacemyui">myui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UI_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UI_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Biblioteki</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespacemyui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemyui" kindref="compound">myui</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495" kindref="member">AppMode</ref><sp/>{<sp/><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170" kindref="member">CREATE_LOG</ref><sp/>=<sp/>1,<sp/><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd" kindref="member">READ_LOGS</ref><sp/>=<sp/>2,<sp/><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d" kindref="member">SAVE_LOGS_TO_FILE</ref><sp/>=<sp/>3,<sp/><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6" kindref="member">QUIT_APP</ref><sp/>=<sp/>4<sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944" kindref="member">ReadMode</ref><sp/>{<sp/><ref refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022" kindref="member">ALL_LOGS</ref><sp/>=<sp/>1,<sp/><ref refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44" kindref="member">ONLY_INFO</ref><sp/>=<sp/>2,<sp/><ref refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060" kindref="member">ONLY_DEBUG</ref><sp/>=<sp/>3,<sp/><ref refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf" kindref="member">ONLY_WARN</ref><sp/>=<sp/>4<sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495" kindref="member">AppMode</ref><sp/><ref refid="namespacemyui_1a44b76e3e17b467d90f3e43711038e0a6" kindref="member">printMenu</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemyui_1a3834204fdd8708a44e5705025b98070e" kindref="member">createLog</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemyui_1afcf399bf272e6a1e927cd96350d6209f" kindref="member">readLogs</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemyui_1a07b62b3e3c50f159bd3d2eeb27356b9d" kindref="member">saveLogsToFile</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="src/ui.hpp"/>
+  </compounddef>
+</doxygen>

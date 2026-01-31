@@ -1,0 +1,187 @@
+\doxysection{myds::\+Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}::\+Iterator Class Reference}
+\hypertarget{classmyds_1_1_linked_list_1_1_iterator}{}\label{classmyds_1_1_linked_list_1_1_iterator}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+
+
+Własna implementacja iteratora do struktury \doxylink{classmyds_1_1_linked_list}{Linked\+List}. Służy nam do łatwego dostępu do danych.  
+
+
+
+
+{\ttfamily \+\#include $<$ds.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} ()=delete
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny, zablokowany. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a5ab7a7567536bebd3d39ceff7a9f363c}{Iterator}} (Node \texorpdfstring{$\ast$}{*}curr\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Konstruktor inicjalizujący itearator. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a64296184e04b712f9deca42c14155eed}{next}} ()
+\begin{DoxyCompactList}\small\item\em Przechodzi do kolejnego elementu Listy. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a078ef160f6fc854af129b01c5b8b2c8f}{operator\texorpdfstring{$\ast$}{*}}} ()
+\begin{DoxyCompactList}\small\item\em Rozpakowywuje wartość chowaną pod konkretnym elementem. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a90dd7aa65d5e5f1bd9a21298835058da}{operator\texorpdfstring{$\ast$}{*}}} () const
+\begin{DoxyCompactList}\small\item\em Rozpakowywuje wartość chowaną pod konkretnym elementem. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a9ce7fa2088add3c0d672695bfd96ddfd}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_aff31a9574310ad48ca50843c21181465}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_adbe0827568799b8c29a4c7022ae0e5ed}{operator==}} (const \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \&other\+\_\+iter) const
+\begin{DoxyCompactList}\small\item\em Nadpisany operator przyrównania (==), który porównuje wskaźniki. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a1f2cda855399ecd51968ed757edc3406}{operator!=}} (const \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \&other\+\_\+iter) const
+\begin{DoxyCompactList}\small\item\em Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class myds::\+\+Linked\+List$<$ T $>$::\+\+Iterator}
+Własna implementacja iteratora do struktury \doxylink{classmyds_1_1_linked_list}{Linked\+List}. Służy nam do łatwego dostępu do danych. 
+
+\label{doc-constructors}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+\+Iterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Konstruktor domyślny, zablokowany. 
+
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a5ab7a7567536bebd3d39ceff7a9f363c}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a5ab7a7567536bebd3d39ceff7a9f363c} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+\+Iterator (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{curr\+\_\+node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor inicjalizujący itearator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr\+\_\+node} & Wskaźnik podglądowy. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a64296184e04b712f9deca42c14155eed}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!next@{next}}
+\index{next@{next}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a64296184e04b712f9deca42c14155eed} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przechodzi do kolejnego elementu Listy. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_linked_list_1_1_iterator}{Iterator} do kolejnego elementu. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a1f2cda855399ecd51968ed757edc3406}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a1f2cda855399ecd51968ed757edc3406} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \&}]{other\+\_\+iter}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+iter} & Inny iterator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prawda/\+\+Fałsz 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a078ef160f6fc854af129b01c5b8b2c8f}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a078ef160f6fc854af129b01c5b8b2c8f} 
+template$<$typename T$>$ \\
+T \& \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rozpakowywuje wartość chowaną pod konkretnym elementem. 
+
+\begin{DoxyReturn}{Returns}
+Wartość elementu listy. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a90dd7aa65d5e5f1bd9a21298835058da}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a90dd7aa65d5e5f1bd9a21298835058da} 
+template$<$typename T$>$ \\
+const T \& \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rozpakowywuje wartość chowaną pod konkretnym elementem. 
+
+\begin{DoxyReturn}{Returns}
+Wartość elementu listy. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_a9ce7fa2088add3c0d672695bfd96ddfd}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_a9ce7fa2088add3c0d672695bfd96ddfd} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_linked_list_1_1_iterator}{Iterator} do kolejnego elementu. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_aff31a9574310ad48ca50843c21181465}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_aff31a9574310ad48ca50843c21181465} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+operator++ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_linked_list_1_1_iterator}{Iterator} do kolejnego elementu. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_1_1_iterator_adbe0827568799b8c29a4c7022ae0e5ed}\index{myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!myds::LinkedList$<$ T $>$::Iterator@{myds::LinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_1_1_iterator_adbe0827568799b8c29a4c7022ae0e5ed} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Iterator::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator_a23c8d10cc7bba00e86ac78f4253752dd}{Iterator}} \&}]{other\+\_\+iter}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator przyrównania (==), który porównuje wskaźniki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+iter} & Inny iterator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prawda/\+\+Fałsz 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{ds_8hpp}{ds.\+hpp}}\end{DoxyCompactItemize}

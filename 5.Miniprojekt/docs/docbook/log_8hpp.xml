@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log_8hpp" xml:lang="en-US">
+<title>src/log.hpp File Reference</title>
+<indexterm><primary>src/log.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;functional&gt;<?linebreak?>#include &quot;ds.hpp&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structmylog_1_1_log_entry">mylog::LogEntry</link></para>
+
+<para>Zbiór informacji dotyczących loga. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classmylog_1_1_sensor_logger">mylog::SensorLogger</link></para>
+
+<para>Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacemylog">mylog</link></para>
+
+<para>Przestrzeń nazw przechowywująca loggera będącego singletonem. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69">mylog::LogType</link> { <link linkend="_namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a8ce81acf0dfbba71ad421525a04b345d">mylog::info</link> = 1
+, <link linkend="_namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a6f83a2fe78017613c275982f9982ed57">mylog::debug</link> = 2
+, <link linkend="_namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a3aee7f26ad0c90d83fd3a5f29c17d5cf">mylog::warning</link> = 3
+ }</para>
+
+<para>Przechowuje informacje jaki to jest typ wiadomości info-informacja, debug-debugowanie, warning-ostrzeżenie. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

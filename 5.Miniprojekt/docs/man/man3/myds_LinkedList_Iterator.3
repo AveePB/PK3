@@ -1,0 +1,167 @@
+.TH "myds::LinkedList< T >::Iterator" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+myds::LinkedList< T >::Iterator \- Własna implementacja iteratora do struktury \fBLinkedList\fP\&. Służy nam do łatwego dostępu do danych\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ds\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIterator\fP ()=delete"
+.br
+.RI "Konstruktor domyślny, zablokowany\&. "
+.ti -1c
+.RI "\fBIterator\fP (Node *curr_node)"
+.br
+.RI "Konstruktor inicjalizujący itearator\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBnext\fP ()"
+.br
+.RI "Przechodzi do kolejnego elementu Listy\&. "
+.ti -1c
+.RI "T & \fBoperator*\fP ()"
+.br
+.RI "Rozpakowywuje wartość chowaną pod konkretnym elementem\&. "
+.ti -1c
+.RI "const T & \fBoperator*\fP () const"
+.br
+.RI "Rozpakowywuje wartość chowaną pod konkretnym elementem\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBoperator++\fP ()"
+.br
+.RI "Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBoperator++\fP (int)"
+.br
+.RI "Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBIterator\fP &other_iter) const"
+.br
+.RI "Nadpisany operator przyrównania (==), który porównuje wskaźniki\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBIterator\fP &other_iter) const"
+.br
+.RI "Nadpisany operator przyrównania (!=), który porównuje wartości indeksów\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class myds::LinkedList< T >::Iterator"Własna implementacja iteratora do struktury \fBLinkedList\fP\&. Służy nam do łatwego dostępu do danych\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T> \fBmyds::LinkedList\fP< T >::Iterator::Iterator ()\fR [delete]\fP"
+
+.PP
+Konstruktor domyślny, zablokowany\&. 
+.SS "template<typename T> \fBmyds::LinkedList\fP< T >::Iterator::Iterator (Node * curr_node)\fR [inline]\fP"
+
+.PP
+Konstruktor inicjalizujący itearator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurr_node\fP Wskaźnik podglądowy\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T> \fBIterator\fP & \fBmyds::LinkedList\fP< T >::Iterator::next ()\fR [inline]\fP"
+
+.PP
+Przechodzi do kolejnego elementu Listy\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do kolejnego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBmyds::LinkedList\fP< T >::Iterator::operator!= (const \fBIterator\fP & other_iter) const\fR [inline]\fP"
+
+.PP
+Nadpisany operator przyrównania (!=), który porównuje wartości indeksów\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_iter\fP Inny iterator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Prawda/Fałsz 
+.RE
+.PP
+
+.SS "template<typename T> T & \fBmyds::LinkedList\fP< T >::Iterator::operator* ()\fR [inline]\fP"
+
+.PP
+Rozpakowywuje wartość chowaną pod konkretnym elementem\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Wartość elementu listy\&. 
+.RE
+.PP
+
+.SS "template<typename T> const T & \fBmyds::LinkedList\fP< T >::Iterator::operator* () const\fR [inline]\fP"
+
+.PP
+Rozpakowywuje wartość chowaną pod konkretnym elementem\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Wartość elementu listy\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP & \fBmyds::LinkedList\fP< T >::Iterator::operator++ ()\fR [inline]\fP"
+
+.PP
+Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do kolejnego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP & \fBmyds::LinkedList\fP< T >::Iterator::operator++ (int )\fR [inline]\fP"
+
+.PP
+Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do kolejnego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBmyds::LinkedList\fP< T >::Iterator::operator== (const \fBIterator\fP & other_iter) const\fR [inline]\fP"
+
+.PP
+Nadpisany operator przyrównania (==), który porównuje wskaźniki\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_iter\fP Inny iterator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Prawda/Fałsz 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="structmylog_1_1_log_entry" kind="struct" language="C++" prot="public">
+    <compoundname>mylog::LogEntry</compoundname>
+    <includes refid="log_8hpp" local="no">log.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmylog_1_1_log_entry_1a4af0f096d6bbddad6b39e401a6b0f73e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mylog::LogEntry::sensor_id</definition>
+        <argsstring></argsstring>
+        <name>sensor_id</name>
+        <qualifiedname>mylog::LogEntry::sensor_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="24" column="5" bodyfile="src/log.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmylog_1_1_log_entry_1aa18b3d706aa82ce889e8783be9290dc7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mylog::LogEntry::msg</definition>
+        <argsstring></argsstring>
+        <name>msg</name>
+        <qualifiedname>mylog::LogEntry::msg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="25" column="13" bodyfile="src/log.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmylog_1_1_log_entry_1aaca72591b8236fd01f120e898a09442c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mylog::LogEntry::read_value</definition>
+        <argsstring></argsstring>
+        <name>read_value</name>
+        <qualifiedname>mylog::LogEntry::read_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="26" column="8" bodyfile="src/log.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmylog_1_1_log_entry_1a2aaee7bccdddb47ac4d457497f29f292" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mylog::LogEntry::date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <qualifiedname>mylog::LogEntry::date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="27" column="13" bodyfile="src/log.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmylog_1_1_log_entry_1afe38065421905ce88a1b3b3faa908db9" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69" kindref="member">LogType</ref></type>
+        <definition>LogType mylog::LogEntry::log_type</definition>
+        <argsstring></argsstring>
+        <name>log_type</name>
+        <qualifiedname>mylog::LogEntry::log_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="28" column="9" bodyfile="src/log.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmylog_1_1_log_entry_1a84b534db11789de846bc7475019c79da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mylog::LogEntry::LogEntry</definition>
+        <argsstring>()</argsstring>
+        <name>LogEntry</name>
+        <qualifiedname>mylog::LogEntry::LogEntry</qualifiedname>
+        <briefdescription>
+<para>Inicjalizuje strukturę. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="33" column="1" bodyfile="src/log.cpp" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structmylog_1_1_log_entry_1a337b6acdab43982189f19a9e161a70bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mylog::LogEntry::LogEntry</definition>
+        <argsstring>(const int &amp;sensor_id, const std::string &amp;msg, const double &amp;read_value, const mylog::LogType &amp;log_type)</argsstring>
+        <name>LogEntry</name>
+        <qualifiedname>mylog::LogEntry::LogEntry</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>sensor_id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>read_value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69" kindref="member">mylog::LogType</ref> &amp;</type>
+          <declname>log_type</declname>
+        </param>
+        <briefdescription>
+<para>Inicjalizuje strukturę. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="structmylog_1_1_log_entry_1a4af0f096d6bbddad6b39e401a6b0f73e" kindref="member">sensor_id</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identyfikator czujnika. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="structmylog_1_1_log_entry_1aa18b3d706aa82ce889e8783be9290dc7" kindref="member">msg</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dodatkowa wiadomość. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="structmylog_1_1_log_entry_1aaca72591b8236fd01f120e898a09442c" kindref="member">read_value</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odczytana wartość z czujnika. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="structmylog_1_1_log_entry_1afe38065421905ce88a1b3b3faa908db9" kindref="member">log_type</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Typ wiadomości. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="42" column="1" bodyfile="src/log.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="structmylog_1_1_log_entry_1add784da497920267e5874edfbfd576a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mylog::LogEntry::setDate</definition>
+        <argsstring>()</argsstring>
+        <name>setDate</name>
+        <qualifiedname>mylog::LogEntry::setDate</qualifiedname>
+        <briefdescription>
+<para>Ustawia aktualną datę jako zawartość zmiennej date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="47" column="6" bodyfile="src/log.cpp" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structmylog_1_1_log_entry_1af87b9d821b9767aaff8a67137c321b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mylog::LogEntry::toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <qualifiedname>mylog::LogEntry::toString</qualifiedname>
+        <briefdescription>
+<para>Zwraca reprezentację obiektu w postaci tekstu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reprezentacja znakowa struktury. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="53" column="13" bodyfile="src/log.cpp" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="structmylog_1_1_log_entry_1aa4a2a534c7c72f8d3d01004a6abd1b0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmylog_1_1_log_entry_1a84b534db11789de846bc7475019c79da" kindref="member">LogEntry</ref> &amp;</type>
+        <definition>mylog::LogEntry &amp; mylog::LogEntry::operator=</definition>
+        <argsstring>(const LogEntry &amp;other_log)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>mylog::LogEntry::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="structmylog_1_1_log_entry_1a84b534db11789de846bc7475019c79da" kindref="member">LogEntry</ref> &amp;</type>
+          <declname>other_log</declname>
+        </param>
+        <briefdescription>
+<para>Nadpisany operator przypisania. Zajmuje się tworzeniem głębokiej kopii. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inny zapis loga. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencja do aktualnego loga. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="67" column="10" bodyfile="src/log.cpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structmylog_1_1_log_entry_1a4d25cbe2a0aa279bf26057030850841a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmylog_1_1_log_entry_1a84b534db11789de846bc7475019c79da" kindref="member">LogEntry</ref></type>
+        <definition>mylog::LogEntry mylog::LogEntry::parseLine</definition>
+        <argsstring>(std::string &amp;line)</argsstring>
+        <name>parseLine</name>
+        <qualifiedname>mylog::LogEntry::parseLine</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Stwórz obiekt <ref refid="structmylog_1_1_log_entry" kindref="compound">LogEntry</ref> na podstawie wczytaj linijki tekstu z pliku. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linijka tesktu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Struktura loga. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="60" column="17" bodyfile="src/log.cpp" bodystart="159" bodyend="178"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Zbiór informacji dotyczących loga. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/log.hpp" line="23" column="1" bodyfile="src/log.hpp" bodystart="23" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structmylog_1_1_log_entry_1a2aaee7bccdddb47ac4d457497f29f292" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>date</name></member>
+      <member refid="structmylog_1_1_log_entry_1afe38065421905ce88a1b3b3faa908db9" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>log_type</name></member>
+      <member refid="structmylog_1_1_log_entry_1a84b534db11789de846bc7475019c79da" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>LogEntry</name></member>
+      <member refid="structmylog_1_1_log_entry_1a337b6acdab43982189f19a9e161a70bf" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>LogEntry</name></member>
+      <member refid="structmylog_1_1_log_entry_1aa18b3d706aa82ce889e8783be9290dc7" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>msg</name></member>
+      <member refid="structmylog_1_1_log_entry_1aa4a2a534c7c72f8d3d01004a6abd1b0d" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>operator=</name></member>
+      <member refid="structmylog_1_1_log_entry_1a4d25cbe2a0aa279bf26057030850841a" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>parseLine</name></member>
+      <member refid="structmylog_1_1_log_entry_1aaca72591b8236fd01f120e898a09442c" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>read_value</name></member>
+      <member refid="structmylog_1_1_log_entry_1a4af0f096d6bbddad6b39e401a6b0f73e" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>sensor_id</name></member>
+      <member refid="structmylog_1_1_log_entry_1add784da497920267e5874edfbfd576a9" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>setDate</name></member>
+      <member refid="structmylog_1_1_log_entry_1af87b9d821b9767aaff8a67137c321b29" prot="public" virt="non-virtual"><scope>mylog::LogEntry</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

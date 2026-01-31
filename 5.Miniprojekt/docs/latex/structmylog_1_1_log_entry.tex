@@ -1,0 +1,186 @@
+\doxysection{mylog::\+Log\+Entry Struct Reference}
+\hypertarget{structmylog_1_1_log_entry}{}\label{structmylog_1_1_log_entry}\index{mylog::LogEntry@{mylog::LogEntry}}
+
+
+Zbiór informacji dotyczących loga.  
+
+
+
+
+{\ttfamily \+\#include $<$log.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{Log\+Entry}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje strukturę. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structmylog_1_1_log_entry_a337b6acdab43982189f19a9e161a70bf}{Log\+Entry}} (const int \&\doxymbox{\hyperlink{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e}{sensor\+\_\+id}}, const std::\+string \&\doxymbox{\hyperlink{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7}{msg}}, const double \&\doxymbox{\hyperlink{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c}{read\+\_\+value}}, const \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{mylog::\+\+Log\+Type}} \&\doxymbox{\hyperlink{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9}{log\+\_\+type}})
+\begin{DoxyCompactList}\small\item\em Inicjalizuje strukturę. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{structmylog_1_1_log_entry_add784da497920267e5874edfbfd576a9}{set\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Ustawia aktualną datę jako zawartość zmiennej date. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{structmylog_1_1_log_entry_af87b9d821b9767aaff8a67137c321b29}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca reprezentację obiektu w postaci tekstu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{Log\+Entry}} \& \doxymbox{\hyperlink{structmylog_1_1_log_entry_aa4a2a534c7c72f8d3d01004a6abd1b0d}{operator=}} (const \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{Log\+Entry}} \&other\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Nadpisany operator przypisania. Zajmuje się tworzeniem głębokiej kopii. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{Log\+Entry}} \doxymbox{\hyperlink{structmylog_1_1_log_entry_a4d25cbe2a0aa279bf26057030850841a}{parse\+Line}} (std::\+string \&line)
+\begin{DoxyCompactList}\small\item\em Stwórz obiekt \doxylink{structmylog_1_1_log_entry}{Log\+Entry} na podstawie wczytaj linijki tekstu z pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e}{sensor\+\_\+id}}
+\item 
+std::\+string \doxymbox{\hyperlink{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7}{msg}}
+\item 
+double \doxymbox{\hyperlink{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c}{read\+\_\+value}}
+\item 
+std::\+string \doxymbox{\hyperlink{structmylog_1_1_log_entry_a2aaee7bccdddb47ac4d457497f29f292}{date}}
+\item 
+\doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{Log\+Type}} \doxymbox{\hyperlink{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9}{log\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Zbiór informacji dotyczących loga. 
+
+\label{doc-constructors}
+\Hypertarget{structmylog_1_1_log_entry_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}\index{mylog::LogEntry@{mylog::LogEntry}!LogEntry@{LogEntry}}
+\index{LogEntry@{LogEntry}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{LogEntry()}{LogEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da} 
+mylog::\+\+Log\+Entry::\+\+Log\+Entry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje strukturę. 
+
+\Hypertarget{structmylog_1_1_log_entry_a337b6acdab43982189f19a9e161a70bf}\index{mylog::LogEntry@{mylog::LogEntry}!LogEntry@{LogEntry}}
+\index{LogEntry@{LogEntry}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{LogEntry()}{LogEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_a337b6acdab43982189f19a9e161a70bf} 
+mylog::\+\+Log\+Entry::\+\+Log\+Entry (\begin{DoxyParamCaption}\item[{const int \&}]{sensor\+\_\+id}{, }\item[{const std::\+string \&}]{msg}{, }\item[{const double \&}]{read\+\_\+value}{, }\item[{const \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{mylog::\+\+Log\+Type}} \&}]{log\+\_\+type}{}\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje strukturę. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e}{sensor\+\_\+id}} & Identyfikator czujnika. \\
+\hline
+{\em \doxylink{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7}{msg}} & Dodatkowa wiadomość. \\
+\hline
+{\em \doxylink{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c}{read\+\_\+value}} & Odczytana wartość z czujnika. \\
+\hline
+{\em \doxylink{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9}{log\+\_\+type}} & Typ wiadomości. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{structmylog_1_1_log_entry_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structmylog_1_1_log_entry_aa4a2a534c7c72f8d3d01004a6abd1b0d}\index{mylog::LogEntry@{mylog::LogEntry}!operator=@{operator=}}
+\index{operator=@{operator=}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_aa4a2a534c7c72f8d3d01004a6abd1b0d} 
+\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} \& mylog::\+\+Log\+Entry::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{Log\+Entry}} \&}]{other\+\_\+log}{}\end{DoxyParamCaption})}
+
+
+
+Nadpisany operator przypisania. Zajmuje się tworzeniem głębokiej kopii. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+log} & Inny zapis loga. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do aktualnego loga. 
+\end{DoxyReturn}
+\Hypertarget{structmylog_1_1_log_entry_a4d25cbe2a0aa279bf26057030850841a}\index{mylog::LogEntry@{mylog::LogEntry}!parseLine@{parseLine}}
+\index{parseLine@{parseLine}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{parseLine()}{parseLine()}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_a4d25cbe2a0aa279bf26057030850841a} 
+\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} mylog::\+\+Log\+Entry::\+parse\+Line (\begin{DoxyParamCaption}\item[{std::\+string \&}]{line}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stwórz obiekt \doxylink{structmylog_1_1_log_entry}{Log\+Entry} na podstawie wczytaj linijki tekstu z pliku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Linijka tesktu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struktura loga. 
+\end{DoxyReturn}
+\Hypertarget{structmylog_1_1_log_entry_add784da497920267e5874edfbfd576a9}\index{mylog::LogEntry@{mylog::LogEntry}!setDate@{setDate}}
+\index{setDate@{setDate}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_add784da497920267e5874edfbfd576a9} 
+void mylog::\+\+Log\+Entry::\+set\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ustawia aktualną datę jako zawartość zmiennej date. 
+
+\Hypertarget{structmylog_1_1_log_entry_af87b9d821b9767aaff8a67137c321b29}\index{mylog::LogEntry@{mylog::LogEntry}!toString@{toString}}
+\index{toString@{toString}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_af87b9d821b9767aaff8a67137c321b29} 
+std::\+string mylog::\+\+Log\+Entry::\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zwraca reprezentację obiektu w postaci tekstu. 
+
+\begin{DoxyReturn}{Returns}
+Reprezentacja znakowa struktury. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{structmylog_1_1_log_entry_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structmylog_1_1_log_entry_a2aaee7bccdddb47ac4d457497f29f292}\index{mylog::LogEntry@{mylog::LogEntry}!date@{date}}
+\index{date@{date}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_a2aaee7bccdddb47ac4d457497f29f292} 
+std::\+string mylog::\+\+Log\+Entry::\+date}
+
+\Hypertarget{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9}\index{mylog::LogEntry@{mylog::LogEntry}!log\_type@{log\_type}}
+\index{log\_type@{log\_type}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{log\_type}{log\_type}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9} 
+\doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{Log\+Type}} mylog::\+\+Log\+Entry::\+log\+\_\+type}
+
+\Hypertarget{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7}\index{mylog::LogEntry@{mylog::LogEntry}!msg@{msg}}
+\index{msg@{msg}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7} 
+std::\+string mylog::\+\+Log\+Entry::\+msg}
+
+\Hypertarget{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c}\index{mylog::LogEntry@{mylog::LogEntry}!read\_value@{read\_value}}
+\index{read\_value@{read\_value}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{read\_value}{read\_value}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c} 
+double mylog::\+\+Log\+Entry::\+read\+\_\+value}
+
+\Hypertarget{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e}\index{mylog::LogEntry@{mylog::LogEntry}!sensor\_id@{sensor\_id}}
+\index{sensor\_id@{sensor\_id}!mylog::LogEntry@{mylog::LogEntry}}
+\doxysubsubsection{\texorpdfstring{sensor\_id}{sensor\_id}}
+{\footnotesize\ttfamily \label{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e} 
+int mylog::\+\+Log\+Entry::\+sensor\+\_\+id}
+
+
+
+The documentation for this struct was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{log_8hpp}{log.\+hpp}}\item 
+src/\+\doxymbox{\hyperlink{log_8cpp}{log.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+.TH "src/ui.hpp" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ui.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <iostream>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBmyui\fP"
+.br
+.RI "Przestrzeń nazw przechowywująca funkcje tworzące interfejs użytkownika\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBmyui::AppMode\fP { \fBmyui::CREATE_LOG\fP = 1, \fBmyui::READ_LOGS\fP = 2, \fBmyui::SAVE_LOGS_TO_FILE\fP = 3, \fBmyui::QUIT_APP\fP = 4 }"
+.br
+.RI "Przechowuje możliwe operacje, jakie może wykonać aplikacja\&. "
+.ti -1c
+.RI "enum \fBmyui::ReadMode\fP { \fBmyui::ALL_LOGS\fP = 1, \fBmyui::ONLY_INFO\fP = 2, \fBmyui::ONLY_DEBUG\fP = 3, \fBmyui::ONLY_WARN\fP = 4 }"
+.br
+.RI "Przechowuje możliwe tryby wyświetlania logów\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppMode\fP \fBmyui::printMenu\fP ()"
+.br
+.RI "Wypisuje do konsoli główne opcje i odpowiadające wybory\&. Oczekuje na informację zwrotną od użytkownika\&. "
+.ti -1c
+.RI "void \fBmyui::createLog\fP ()"
+.br
+.RI "Tworzy nowego loga i dodaje go do struktury\&. "
+.ti -1c
+.RI "void \fBmyui::readLogs\fP ()"
+.br
+.RI "Wyświetl przechowywane logi do konsoli\&. "
+.ti -1c
+.RI "void \fBmyui::saveLogsToFile\fP ()"
+.br
+.RI "Zapisuje informacje do pewnego pliku tekstowego z rozszerzeniem log\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

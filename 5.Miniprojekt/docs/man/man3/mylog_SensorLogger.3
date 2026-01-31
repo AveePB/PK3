@@ -1,0 +1,130 @@
+.TH "mylog::SensorLogger" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mylog::SensorLogger \- Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <log\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBloadFromFile\fP ()"
+.br
+.RI "Wczytaj logi z pliku teskstowego\&. "
+.ti -1c
+.RI "void \fBsaveToFile\fP ()"
+.br
+.RI "Zapisuje logi do pliku teskstowego\&. "
+.ti -1c
+.RI "void \fBcreateLog\fP (const int &sensor_id, const std::string &msg, const double &read_value, const \fBLogType\fP &log_type)"
+.br
+.RI "Tworzy nowego loga i dodaje go do listy\&. "
+.ti -1c
+.RI "void \fBcreateLog\fP (\fBmylog::LogEntry\fP &log)"
+.br
+.RI "Tworzy nowego loga i dodaje go do listy\&. "
+.ti -1c
+.RI "void \fBcreateLog\fP (\fBmylog::LogEntry\fP &&log)"
+.br
+.RI "Tworzy nowego loga i dodaje go do listy\&. "
+.ti -1c
+.RI "\fBmyds::CustomVector\fP< \fBLogEntry\fP > \fBfilter\fP (const std::function< bool(\fBLogEntry\fP &)> &predicate) const"
+.br
+.RI "Zwraca elementy spełniające podany predykat\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static SensorLogger & \fBgetSingleton\fP ()"
+.br
+.RI "Zwraca/inicjalizuje loggera\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void mylog::SensorLogger::createLog (const int & sensor_id, const std::string & msg, const double & read_value, const \fBLogType\fP & log_type)"
+
+.PP
+Tworzy nowego loga i dodaje go do listy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsensor_id\fP Identyfikator czujnika\&. 
+.br
+\fImsg\fP Dodatkowa wiadomość\&. 
+.br
+\fIread_value\fP Odczytana wartość z czujnika\&. 
+.br
+\fIlog_type\fP Typ wiadomości\&. 
+.RE
+.PP
+
+.SS "void mylog::SensorLogger::createLog (\fBmylog::LogEntry\fP && log)"
+
+.PP
+Tworzy nowego loga i dodaje go do listy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlog\fP Dane związane z logiem\&. 
+.RE
+.PP
+
+.SS "void mylog::SensorLogger::createLog (\fBmylog::LogEntry\fP & log)"
+
+.PP
+Tworzy nowego loga i dodaje go do listy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlog\fP Dane związane z logiem\&. 
+.RE
+.PP
+
+.SS "\fBmyds::CustomVector\fP< \fBmylog::LogEntry\fP > mylog::SensorLogger::filter (const std::function< bool(\fBLogEntry\fP &)> & predicate) const"
+
+.PP
+Zwraca elementy spełniające podany predykat\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpredicate\fP Predykat\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wektor elementów będących częścią listy\&. 
+.RE
+.PP
+
+.SS "\fBmylog::SensorLogger\fP & mylog::SensorLogger::getSingleton ()\fR [static]\fP"
+
+.PP
+Zwraca/inicjalizuje loggera\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Instancja loggera\&. 
+.RE
+.PP
+
+.SS "void mylog::SensorLogger::loadFromFile ()"
+
+.PP
+Wczytaj logi z pliku teskstowego\&. 
+.SS "void mylog::SensorLogger::saveToFile ()"
+
+.PP
+Zapisuje logi do pliku teskstowego\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

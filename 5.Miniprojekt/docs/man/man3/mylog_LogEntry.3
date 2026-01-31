@@ -1,0 +1,153 @@
+.TH "mylog::LogEntry" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mylog::LogEntry \- Zbiór informacji dotyczących loga\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <log\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogEntry\fP ()"
+.br
+.RI "Inicjalizuje strukturę\&. "
+.ti -1c
+.RI "\fBLogEntry\fP (const int &\fBsensor_id\fP, const std::string &\fBmsg\fP, const double &\fBread_value\fP, const \fBmylog::LogType\fP &\fBlog_type\fP)"
+.br
+.RI "Inicjalizuje strukturę\&. "
+.ti -1c
+.RI "void \fBsetDate\fP ()"
+.br
+.RI "Ustawia aktualną datę jako zawartość zmiennej date\&. "
+.ti -1c
+.RI "std::string \fBtoString\fP ()"
+.br
+.RI "Zwraca reprezentację obiektu w postaci tekstu\&. "
+.ti -1c
+.RI "\fBLogEntry\fP & \fBoperator=\fP (const \fBLogEntry\fP &other_log)"
+.br
+.RI "Nadpisany operator przypisania\&. Zajmuje się tworzeniem głębokiej kopii\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBLogEntry\fP \fBparseLine\fP (std::string &line)"
+.br
+.RI "Stwórz obiekt \fBLogEntry\fP na podstawie wczytaj linijki tekstu z pliku\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBsensor_id\fP"
+.br
+.ti -1c
+.RI "std::string \fBmsg\fP"
+.br
+.ti -1c
+.RI "double \fBread_value\fP"
+.br
+.ti -1c
+.RI "std::string \fBdate\fP"
+.br
+.ti -1c
+.RI "\fBLogType\fP \fBlog_type\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Zbiór informacji dotyczących loga\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mylog::LogEntry::LogEntry ()"
+
+.PP
+Inicjalizuje strukturę\&. 
+.SS "mylog::LogEntry::LogEntry (const int & sensor_id, const std::string & msg, const double & read_value, const \fBmylog::LogType\fP & log_type)"
+
+.PP
+Inicjalizuje strukturę\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fBsensor_id\fP\fP Identyfikator czujnika\&. 
+.br
+\fI\fBmsg\fP\fP Dodatkowa wiadomość\&. 
+.br
+\fI\fBread_value\fP\fP Odczytana wartość z czujnika\&. 
+.br
+\fI\fBlog_type\fP\fP Typ wiadomości\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBmylog::LogEntry\fP & mylog::LogEntry::operator= (const \fBLogEntry\fP & other_log)"
+
+.PP
+Nadpisany operator przypisania\&. Zajmuje się tworzeniem głębokiej kopii\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_log\fP Inny zapis loga\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Referencja do aktualnego loga\&. 
+.RE
+.PP
+
+.SS "\fBmylog::LogEntry\fP mylog::LogEntry::parseLine (std::string & line)\fR [static]\fP"
+
+.PP
+Stwórz obiekt \fBLogEntry\fP na podstawie wczytaj linijki tekstu z pliku\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIline\fP Linijka tesktu 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Struktura loga\&. 
+.RE
+.PP
+
+.SS "void mylog::LogEntry::setDate ()"
+
+.PP
+Ustawia aktualną datę jako zawartość zmiennej date\&. 
+.SS "std::string mylog::LogEntry::toString ()"
+
+.PP
+Zwraca reprezentację obiektu w postaci tekstu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reprezentacja znakowa struktury\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string mylog::LogEntry::date"
+
+.SS "\fBLogType\fP mylog::LogEntry::log_type"
+
+.SS "std::string mylog::LogEntry::msg"
+
+.SS "double mylog::LogEntry::read_value"
+
+.SS "int mylog::LogEntry::sensor_id"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

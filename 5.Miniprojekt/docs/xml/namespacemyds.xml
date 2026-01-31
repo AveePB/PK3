@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespacemyds" kind="namespace" language="C++">
+    <compoundname>myds</compoundname>
+    <innerclass refid="classmyds_1_1_custom_vector" prot="public">myds::CustomVector</innerclass>
+    <innerclass refid="classmyds_1_1_linked_list" prot="public">myds::LinkedList</innerclass>
+    <briefdescription>
+<para>Przestrzeń nazw przechowywująca własnoręcznie napisane kontenery. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/ds.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,97 @@
+.TH "myui" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+myui \- Przestrzeń nazw przechowywująca funkcje tworzące interfejs użytkownika\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBAppMode\fP { \fBCREATE_LOG\fP = 1, \fBREAD_LOGS\fP = 2, \fBSAVE_LOGS_TO_FILE\fP = 3, \fBQUIT_APP\fP = 4 }"
+.br
+.RI "Przechowuje możliwe operacje, jakie może wykonać aplikacja\&. "
+.ti -1c
+.RI "enum \fBReadMode\fP { \fBALL_LOGS\fP = 1, \fBONLY_INFO\fP = 2, \fBONLY_DEBUG\fP = 3, \fBONLY_WARN\fP = 4 }"
+.br
+.RI "Przechowuje możliwe tryby wyświetlania logów\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppMode\fP \fBprintMenu\fP ()"
+.br
+.RI "Wypisuje do konsoli główne opcje i odpowiadające wybory\&. Oczekuje na informację zwrotną od użytkownika\&. "
+.ti -1c
+.RI "void \fBcreateLog\fP ()"
+.br
+.RI "Tworzy nowego loga i dodaje go do struktury\&. "
+.ti -1c
+.RI "void \fBreadLogs\fP ()"
+.br
+.RI "Wyświetl przechowywane logi do konsoli\&. "
+.ti -1c
+.RI "void \fBsaveLogsToFile\fP ()"
+.br
+.RI "Zapisuje informacje do pewnego pliku tekstowego z rozszerzeniem log\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Przestrzeń nazw przechowywująca funkcje tworzące interfejs użytkownika\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBmyui::AppMode\fP"
+
+.PP
+Przechowuje możliwe operacje, jakie może wykonać aplikacja\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BICREATE_LOG \fP
+.TP
+\f(BIREAD_LOGS \fP
+.TP
+\f(BISAVE_LOGS_TO_FILE \fP
+.TP
+\f(BIQUIT_APP \fP
+.SS "enum \fBmyui::ReadMode\fP"
+
+.PP
+Przechowuje możliwe tryby wyświetlania logów\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIALL_LOGS \fP
+.TP
+\f(BIONLY_INFO \fP
+.TP
+\f(BIONLY_DEBUG \fP
+.TP
+\f(BIONLY_WARN \fP
+.SH "Function Documentation"
+.PP 
+.SS "void myui::createLog ()"
+
+.PP
+Tworzy nowego loga i dodaje go do struktury\&. 
+.SS "\fBmyui::AppMode\fP myui::printMenu ()"
+
+.PP
+Wypisuje do konsoli główne opcje i odpowiadające wybory\&. Oczekuje na informację zwrotną od użytkownika\&. 
+.SS "void myui::readLogs ()"
+
+.PP
+Wyświetl przechowywane logi do konsoli\&. 
+.SS "void myui::saveLogsToFile ()"
+
+.PP
+Zapisuje informacje do pewnego pliku tekstowego z rozszerzeniem log\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

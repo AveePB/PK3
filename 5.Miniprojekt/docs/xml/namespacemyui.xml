@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespacemyui" kind="namespace" language="C++">
+    <compoundname>myui</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacemyui_1abf88ef46d5552611fa142d7b022a8495" prot="public" static="no" strong="no">
+        <type></type>
+        <name>AppMode</name>
+        <qualifiedname>myui::AppMode</qualifiedname>
+        <enumvalue id="namespacemyui_1abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170" prot="public">
+          <name>CREATE_LOG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemyui_1abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd" prot="public">
+          <name>READ_LOGS</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemyui_1abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d" prot="public">
+          <name>SAVE_LOGS_TO_FILE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemyui_1abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6" prot="public">
+          <name>QUIT_APP</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Przechowuje możliwe operacje, jakie może wykonać aplikacja. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ui.hpp" line="15" column="1" bodyfile="src/ui.hpp" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ReadMode</name>
+        <qualifiedname>myui::ReadMode</qualifiedname>
+        <enumvalue id="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022" prot="public">
+          <name>ALL_LOGS</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44" prot="public">
+          <name>ONLY_INFO</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060" prot="public">
+          <name>ONLY_DEBUG</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf" prot="public">
+          <name>ONLY_WARN</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Przechowuje możliwe tryby wyświetlania logów. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ui.hpp" line="20" column="1" bodyfile="src/ui.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemyui_1a44b76e3e17b467d90f3e43711038e0a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495" kindref="member">AppMode</ref></type>
+        <definition>myui::AppMode myui::printMenu</definition>
+        <argsstring>()</argsstring>
+        <name>printMenu</name>
+        <qualifiedname>myui::printMenu</qualifiedname>
+        <briefdescription>
+<para>Wypisuje do konsoli główne opcje i odpowiadające wybory. Oczekuje na informację zwrotną od użytkownika. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ui.hpp" line="25" column="9" bodyfile="src/ui.cpp" bodystart="10" bodyend="49" declfile="src/ui.hpp" declline="25" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemyui_1a3834204fdd8708a44e5705025b98070e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myui::createLog</definition>
+        <argsstring>()</argsstring>
+        <name>createLog</name>
+        <qualifiedname>myui::createLog</qualifiedname>
+        <briefdescription>
+<para>Tworzy nowego loga i dodaje go do struktury. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ui.hpp" line="30" column="6" bodyfile="src/ui.cpp" bodystart="55" bodyend="122" declfile="src/ui.hpp" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemyui_1afcf399bf272e6a1e927cd96350d6209f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myui::readLogs</definition>
+        <argsstring>()</argsstring>
+        <name>readLogs</name>
+        <qualifiedname>myui::readLogs</qualifiedname>
+        <briefdescription>
+<para>Wyświetl przechowywane logi do konsoli. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ui.hpp" line="35" column="6" bodyfile="src/ui.cpp" bodystart="127" bodyend="207" declfile="src/ui.hpp" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemyui_1a07b62b3e3c50f159bd3d2eeb27356b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myui::saveLogsToFile</definition>
+        <argsstring>()</argsstring>
+        <name>saveLogsToFile</name>
+        <qualifiedname>myui::saveLogsToFile</qualifiedname>
+        <briefdescription>
+<para>Zapisuje informacje do pewnego pliku tekstowego z rozszerzeniem log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ui.hpp" line="40" column="6" bodyfile="src/ui.cpp" bodystart="212" bodyend="215" declfile="src/ui.hpp" declline="40" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Przestrzeń nazw przechowywująca funkcje tworzące interfejs użytkownika. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/ui.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>

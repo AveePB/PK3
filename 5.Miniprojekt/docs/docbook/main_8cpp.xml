@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp" xml:lang="en-US">
+<title>src/main.cpp File Reference</title>
+<indexterm><primary>src/main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &quot;ds.hpp&quot;<?linebreak?>#include &quot;log.hpp&quot;<?linebreak?>#include &quot;ui.hpp&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+
+<para>Punkt wejściowy do programu. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+
+<para>Punkt wejściowy do programu. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0, jeśli program wykonał się poprawnie. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

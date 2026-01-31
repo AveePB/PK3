@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ds_8hpp_source" xml:lang="en-US">
+<title>ds.hpp</title>
+<indexterm><primary>src/ds.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;DS_HPP</emphasis>
+2 <emphasis role="preprocessor">#define&#32;DS_HPP</emphasis>
+3 
+4 <emphasis role="comment">//&#32;Biblioteki</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+7 
+11 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacemyds">myds</link>&#32;{
+12 
+16 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link>&#32;{
+18 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;DEFAULT_CAPACITY&#32;=&#32;1;&#32;<emphasis role="comment">//&#32;&lt;&#32;Domyślna&#32;wieklość&#32;tablicy.</emphasis>
+20 
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;actual_capacity;&#32;<emphasis role="comment">//&#32;&lt;&#32;Rzeczywisty&#32;rozmiar&#32;tablicy.&#32;</emphasis>
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;n_elements;&#32;<emphasis role="comment">//&#32;&lt;&#32;Liczba&#32;zapełnionych&#32;elementów&#32;tablicy.&#32;</emphasis>
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T*&#32;arr;&#32;<emphasis role="comment">//&#32;&lt;&#32;Dynamicznie&#32;zaalokowana&#32;tablica.</emphasis>
+24 
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;extendArray()&#32;{
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Stwórz&#32;tablicę&#32;pomocniczą&#32;</emphasis>
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;T[]&gt;&#32;new_arr&#32;=&#32;std::make_unique&lt;T[]&gt;(2&#32;*&#32;this-&gt;actual_capacity);
+31 
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n_elements;&#32;i++)&#32;new_arr[i]&#32;=&#32;this-&gt;arr[i];
+33 
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Usuń&#32;starą&#32;tablicę&#32;i&#32;przenieś&#32;nową</emphasis>
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;this-&gt;arr;
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr&#32;=&#32;new_arr.release();
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;actual_capacity&#32;*=&#32;2;
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+39 
+40 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link>()&#32;:&#32;actual_capacity(DEFAULT_CAPACITY),&#32;n_elements(0),&#32;arr(new&#32;T[DEFAULT_CAPACITY])&#32;{&#32;}
+45 
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1ac8eacabb336c6abf0db376aec312e776">CustomVector</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;n)&#32;:&#32;actual_capacity(2*n),&#32;n_elements(0),&#32;arr(new&#32;T[2*n])&#32;{&#32;}
+51 
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1a6d0f7cf930201dd64eba6ebbd4204475">CustomVector</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector&lt;T&gt;</link>&amp;&#32;other_vec)&#32;:&#32;actual_capacity(other_vec.actual_capacity),&#32;n_elements(other_vec.n_elements),&#32;arr(new&#32;T[other_vec.actual_capacity])&#32;{
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialize&#32;array&#32;elements&#32;with&#32;the&#32;same&#32;values</emphasis>
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;other_vec.n_elements;&#32;i++)
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr[i]&#32;=&#32;other_vec.arr[i];
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+61 
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1a8b6e3b90297b0d9c8ca71346487711c7">CustomVector</link>(<link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector&lt;T&gt;</link>&amp;&amp;&#32;other_vec)&#32;{
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Przypisz&#32;dane&#32;z&#32;innego&#32;obiektu&#32;</emphasis>
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;actual_capacity&#32;=&#32;other_vec.actual_capacity;
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;n_elements&#32;=&#32;other_vec.n_elements;
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr&#32;=&#32;other_vec.arr;
+71 
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Opróżnij&#32;inny&#32;obiekt</emphasis>
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other_vec.actual_capacity&#32;=&#32;DEFAULT_CAPACITY;
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other_vec.n_elements&#32;=&#32;0;
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other_vec.arr&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;T[DEFAULT_CAPACITY];
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+77 
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1a9d93bbdf4acb4fdac75829be4dd01cb5">~CustomVector</link>()&#32;{&#32;<emphasis role="keyword">delete</emphasis>[]&#32;arr;&#32;}
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1a507b0a70726c7c49b0173eb919b7ec95">size</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;n_elements;&#32;}
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1a62e1038822a2e7ac9b32823acad1ac59">pushBack</link>(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;val)&#32;{&#32;
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Tablica&#32;jest&#32;zbyt&#32;mała</emphasis>
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(n_elements&#32;==&#32;actual_capacity)&#32;extendArray();
+96 
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Przypisz&#32;nowy&#32;element</emphasis>
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr[this-&gt;n_elements++]&#32;=&#32;val;
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+100 
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1adbdd13f1854bb1f0e5a4047107cf8f86">pushBack</link>(T&amp;&amp;&#32;val)&#32;{&#32;
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Tablica&#32;jest&#32;zbyt&#32;mała</emphasis>
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(n_elements&#32;==&#32;actual_capacity)&#32;extendArray();
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Przypisz&#32;nowy&#32;element</emphasis>
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr[this-&gt;n_elements++]&#32;=&#32;std::move(val);&#32;
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+112 
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1ab7e4f043cf7cdee1466ad5124c1dc21b">clear</link>()&#32;{
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Usuń&#32;tablicę</emphasis>
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;T[]&gt;&#32;new_arr&#32;=&#32;std::make_unique&lt;T[]&gt;(DEFAULT_CAPACITY);
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;arr;
+120 
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Zaalokuj&#32;domyślną</emphasis>
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr&#32;=&#32;new_arr.release();
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;actual_capacity&#32;=&#32;DEFAULT_CAPACITY;
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;n_elements&#32;=&#32;0;
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+126 
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1ab537ed8930c324eb0671c82eac798a80">empty</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;n_elements&#32;==&#32;0;&#32;}
+132 
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1afc1bacda5f5b4b230142b275ea087b32">at</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;idx)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Zgłoś&#32;wyjątek</emphasis>
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(idx&#32;&gt;=&#32;n_elements)&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Index&#32;out&#32;of&#32;bounds&quot;</emphasis>);
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;arr[idx];
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+143 
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1ad1d07672154684115d942fc5681c1681">operator[]</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;idx)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1afc1bacda5f5b4b230142b275ea087b32">at</link>(idx);&#32;}
+150 
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1a22c7212f1249faa93085509d977ca6d0">operator[]</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;idx)&#32;{&#32;
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Zgłoś&#32;wyjątek</emphasis>
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(idx&#32;&gt;=&#32;n_elements)&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Index&#32;out&#32;of&#32;bounds&quot;</emphasis>);
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;arr[idx];&#32;
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+162 
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link>&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1ab3942ce83d6bf5f3ae9ea84102a5a4df">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector&lt;T&gt;</link>&amp;&#32;other_vec)&#32;{
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Stwórz&#32;tablicę&#32;pomocniczą&#32;</emphasis>
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;T[]&gt;&#32;new_arr&#32;=&#32;std::make_unique&lt;T[]&gt;(other_vec.actual_capacity);
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;other_vec.n_elements;&#32;i++)&#32;new_arr[i]&#32;=&#32;other_vec.arr[i];
+172 
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Usuń&#32;starą&#32;tablicę&#32;i&#32;przenieś&#32;nową</emphasis>
+174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;this-&gt;arr;
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;arr&#32;=&#32;new_arr.release();
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;actual_capacity&#32;=&#32;other_vec.actual_capacity;
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;n_elements&#32;=&#32;other_vec.n_elements;
+178 
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+181 
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>&#32;{
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T*&#32;arr;&#32;<emphasis role="comment">//&#32;&lt;&#32;Wskaźnik&#32;podlądowy&#32;na&#32;tablicę.</emphasis>
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;idx;&#32;<emphasis role="comment">//&#32;Aktualny&#32;indeks&#32;elementu.</emphasis>
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;size;&#32;<emphasis role="comment">//&#32;&lt;&#32;Liczba&#32;elementów&#32;we&#32;wektorze.</emphasis>
+190 
+191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>()&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+196 
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1aa0c104bb52f2d12e6b11fc0a1caf7849">Iterator</link>(T*&#32;arr,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;size,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;is_end&#32;=&#32;<emphasis role="keyword">false</emphasis>)&#32;:&#32;arr(arr),&#32;size(size),&#32;idx(0)&#32;{&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_end)&#32;idx&#32;=&#32;size;&#32;}
+204 
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1ae4bf3db1e6f1e4803941bf1c8c8440df">next</link>()&#32;{
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;idx++;
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+213 
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a993711002dd38d7d156af977949db231">operator*</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;arr[idx];&#32;}
+219 
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1ab1d43d9f1b5bbcd38db1b71db1cf040f">operator*</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;arr[idx];&#32;}
+225 
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a018892a476108f52c7842ae23454b986">operator++</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1ae4bf3db1e6f1e4803941bf1c8c8440df">next</link>();&#32;}
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>&amp;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1aab3681e1a159c5b44280b1454d1a84a6">operator++</link>(<emphasis role="keywordtype">int</emphasis>)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1ae4bf3db1e6f1e4803941bf1c8c8440df">next</link>();&#32;}
+237 
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a9d42d8a47ad9b09eec392809780e2f3c">operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>&amp;&#32;other_iter)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;idx&#32;==&#32;other_iter.idx;&#32;}
+244 
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a83d299d74773f92d7ed5cd7e980847cd">operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link>&amp;&#32;other_iter)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;idx&#32;!=&#32;other_iter.idx;&#32;}
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+252 
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link>&#32;<link linkend="_classmyds_1_1_custom_vector_1a7df3f5b6a50887eda8228ce81d9cd3d7">begin</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link>(this-&gt;arr,&#32;this-&gt;n_elements);&#32;}
+258 
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link>&#32;<link linkend="_classmyds_1_1_custom_vector_1a1752a6192c837d878923af13431e9553">end</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link>(this-&gt;arr,&#32;this-&gt;n_elements,&#32;<emphasis role="keyword">true</emphasis>);&#32;}
+264 &#32;&#32;&#32;&#32;};
+265 
+269 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+270 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f">LinkedList</link>&#32;{
+271 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Node&#32;{
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;Node&gt;&#32;next;&#32;<emphasis role="comment">//&#32;&lt;&#32;Inteligentny&#32;wskaźnik&#32;do&#32;kolejnego&#32;elementu.</emphasis>
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T&#32;value;&#32;<emphasis role="comment">//&#32;&lt;&#32;Wartość&#32;przechowywana&#32;we&#32;węźle.</emphasis>
+279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Node()&#32;{&#32;}
+284 
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Node(<emphasis role="keyword">const</emphasis>&#32;Node&amp;&#32;other)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+290 
+295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Node(<emphasis role="keyword">const</emphasis>&#32;Node&amp;&amp;&#32;other)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+296 
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Node(std::unique_ptr&lt;Node&gt;&amp;&amp;&#32;next,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;value)&#32;:&#32;next(std::move(next)),&#32;value(value)&#32;{&#32;}
+303 
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Node(std::unique_ptr&lt;Node&gt;&amp;&amp;&#32;next,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&amp;&#32;value)&#32;:&#32;next(std::move(next)),&#32;value(std::move(value))&#32;{}
+310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+311 
+312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;Node&gt;&#32;head;&#32;<emphasis role="comment">//&#32;&lt;&#32;Inteligentny&#32;wskaźnik&#32;na&#32;pierwszy&#32;element&#32;listy.</emphasis>
+313 
+314 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+316 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Konstruktor&#32;domyślny,&#32;tworzący&#32;pustą&#32;listę.</emphasis>
+317 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f">LinkedList</link>()&#32;{&#32;}
+319 
+324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1addd35e4fc18b445953f5a2ca9ea54697">LinkedList</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f">LinkedList</link>&amp;&#32;other_list)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+325 
+330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1aec9618b48dd71b081764927712864227">LinkedList</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f">LinkedList</link>&amp;&amp;&#32;other_list)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+331 
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1a234bfe6b6f71189e74d89dc425b01d39">add</link>(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;value)&#32;{
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Stwórz&#32;nowy&#32;węzeł</emphasis>
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;Node&gt;&#32;new_head&#32;=&#32;std::make_unique&lt;Node&gt;(std::move(this-&gt;head),&#32;value);
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;head&#32;=&#32;std::move(new_head);
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+341 
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1a1c054e0dcd57c7fcc69a983c58c32e6e">add</link>(T&amp;&amp;&#32;value)&#32;{
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Stwórz&#32;nowy&#32;węzeł</emphasis>
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::unique_ptr&lt;Node&gt;&#32;new_head&#32;=&#32;std::make_unique&lt;Node&gt;(std::move(this-&gt;head),&#32;std::move(value));
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;head&#32;=&#32;std::move(new_head);
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+351 
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1a3021ae4f87c827af3eda1b0f4f061836">pop</link>()&#32;{
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Jeśli&#32;nie&#32;jest&#32;pusta</emphasis>
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;head.get())&#32;
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;head&#32;=&#32;std::move(this-&gt;head.get()-&gt;next);
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+360 
+365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1ab3c3c12151136406aad5e5d6b2bf65f1">empty</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;head.get()&#32;==&#32;<emphasis role="keyword">nullptr</emphasis>;&#32;}
+366 
+370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>&#32;{
+371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Node*&#32;curr_node;&#32;<emphasis role="comment">//&#32;&lt;&#32;Wskaźnik&#32;podlądowy&#32;na&#32;węzeł</emphasis>
+373 
+374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>()&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+379 
+384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a5ab7a7567536bebd3d39ceff7a9f363c">Iterator</link>(Node*&#32;curr_node)&#32;:&#32;curr_node(curr_node)&#32;{&#32;}
+385 
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>&amp;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed">next</link>()&#32;{
+391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(curr_node)&#32;curr_node&#32;=&#32;curr_node-&gt;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed">next</link>.get();
+392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+394 
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T&amp;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a078ef160f6fc854af129b01c5b8b2c8f">operator*</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;curr_node-&gt;value;&#32;}
+400 
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a90dd7aa65d5e5f1bd9a21298835058da">operator*</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;curr_node-&gt;value;&#32;}
+406 
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>&amp;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a9ce7fa2088add3c0d672695bfd96ddfd">operator++</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed">next</link>();&#32;}
+412 
+417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>&amp;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1aff31a9574310ad48ca50843c21181465">operator++</link>(<emphasis role="keywordtype">int</emphasis>)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed">next</link>();&#32;}
+418 
+424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1adbe0827568799b8c29a4c7022ae0e5ed">operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>&amp;&#32;other_iter)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;curr_node&#32;==&#32;other_iter.curr_node;&#32;}
+425 
+431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a1f2cda855399ecd51968ed757edc3406">operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link>&amp;&#32;other_iter)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;curr_node&#32;!=&#32;other_iter.curr_node;&#32;}
+432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+433 
+438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link>&#32;<link linkend="_classmyds_1_1_linked_list_1a78c557fec0e51190a41b7628eb7f6597">begin</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link>(this-&gt;head.get());&#32;}
+439 
+444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link>&#32;<link linkend="_classmyds_1_1_linked_list_1ab1858cd0cc8a5051619022e1517787ca">end</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link>(<emphasis role="keyword">nullptr</emphasis>);&#32;}
+445 &#32;&#32;&#32;&#32;};
+446 };
+447 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

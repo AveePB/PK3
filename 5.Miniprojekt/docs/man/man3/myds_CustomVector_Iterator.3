@@ -1,0 +1,171 @@
+.TH "myds::CustomVector< T >::Iterator" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+myds::CustomVector< T >::Iterator \- Własna implementacja iteratora do struktury \fBCustomVector\fP\&. Służy nam do łatwego dostępu do danych\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ds\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIterator\fP ()=delete"
+.br
+.RI "Konstruktor domyślny, zablokowany\&. "
+.ti -1c
+.RI "\fBIterator\fP (T *arr, size_t size, bool is_end=false)"
+.br
+.RI "Konstruktor inicjalizujący itearator\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBnext\fP ()"
+.br
+.RI "Przechodzi do kolejnego elementu wektora\&. "
+.ti -1c
+.RI "T & \fBoperator*\fP ()"
+.br
+.RI "Rozpakowywuje wartość chowaną pod konkretnym elementem\&. "
+.ti -1c
+.RI "const T & \fBoperator*\fP () const"
+.br
+.RI "Rozpakowywuje wartość chowaną pod konkretnym elementem\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBoperator++\fP ()"
+.br
+.RI "Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBoperator++\fP (int)"
+.br
+.RI "Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBIterator\fP &other_iter) const"
+.br
+.RI "Nadpisany operator przyrównania (==), który porównuje wartości indeksów\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBIterator\fP &other_iter) const"
+.br
+.RI "Nadpisany operator przyrównania (!=), który porównuje wartości indeksów\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class myds::CustomVector< T >::Iterator"Własna implementacja iteratora do struktury \fBCustomVector\fP\&. Służy nam do łatwego dostępu do danych\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::Iterator::Iterator ()\fR [delete]\fP"
+
+.PP
+Konstruktor domyślny, zablokowany\&. 
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::Iterator::Iterator (T * arr, size_t size, bool is_end = \fRfalse\fP)\fR [inline]\fP"
+
+.PP
+Konstruktor inicjalizujący itearator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarr\fP Wskaźnik do tablicy\&. 
+.br
+\fIsize\fP Rozmiar wektora\&. 
+.br
+\fIis_end\fP Mówi nam czy tworzyć iterator do końca kontenera\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T> \fBIterator\fP & \fBmyds::CustomVector\fP< T >::Iterator::next ()\fR [inline]\fP"
+
+.PP
+Przechodzi do kolejnego elementu wektora\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do kolejnego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBmyds::CustomVector\fP< T >::Iterator::operator!= (const \fBIterator\fP & other_iter) const\fR [inline]\fP"
+
+.PP
+Nadpisany operator przyrównania (!=), który porównuje wartości indeksów\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_iter\fP Inny iterator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Prawda/Fałsz 
+.RE
+.PP
+
+.SS "template<typename T> T & \fBmyds::CustomVector\fP< T >::Iterator::operator* ()\fR [inline]\fP"
+
+.PP
+Rozpakowywuje wartość chowaną pod konkretnym elementem\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Wartość elementu wektora\&. 
+.RE
+.PP
+
+.SS "template<typename T> const T & \fBmyds::CustomVector\fP< T >::Iterator::operator* () const\fR [inline]\fP"
+
+.PP
+Rozpakowywuje wartość chowaną pod konkretnym elementem\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Wartość elementu wektora 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP & \fBmyds::CustomVector\fP< T >::Iterator::operator++ ()\fR [inline]\fP"
+
+.PP
+Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do kolejnego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP & \fBmyds::CustomVector\fP< T >::Iterator::operator++ (int )\fR [inline]\fP"
+
+.PP
+Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do kolejnego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBmyds::CustomVector\fP< T >::Iterator::operator== (const \fBIterator\fP & other_iter) const\fR [inline]\fP"
+
+.PP
+Nadpisany operator przyrównania (==), który porównuje wartości indeksów\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_iter\fP Inny iterator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Prawda/Fałsz 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_classmyds_1_1_custom_vector">myds::CustomVector&lt; T &gt;</link>
+<para>Własna implementacja wektora z biblioteki STL </para>
+<link linkend="_classmyds_1_1_custom_vector_1_1_iterator">myds::CustomVector&lt; T &gt;::Iterator</link>
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_custom_vector">CustomVector</link>. Służy nam do łatwego dostępu do danych </para>
+<link linkend="_classmyds_1_1_linked_list_1_1_iterator">myds::LinkedList&lt; T &gt;::Iterator</link>
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_linked_list">LinkedList</link>. Służy nam do łatwego dostępu do danych </para>
+<link linkend="_classmyds_1_1_linked_list">myds::LinkedList&lt; T &gt;</link>
+<para>Własna implementacja listy jednokierunkowej. To kontener LIFO (Last in first out) </para>
+<link linkend="_structmylog_1_1_log_entry">mylog::LogEntry</link>
+<para>Zbiór informacji dotyczących loga </para>
+<link linkend="_classmylog_1_1_sensor_logger">mylog::SensorLogger</link>
+<para>Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log </para>
+</section>

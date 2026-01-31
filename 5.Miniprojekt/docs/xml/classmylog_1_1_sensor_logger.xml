@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="classmylog_1_1_sensor_logger" kind="class" language="C++" prot="public">
+    <compoundname>mylog::SensorLogger</compoundname>
+    <includes refid="log_8hpp" local="no">log.hpp</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmylog_1_1_sensor_logger_1a0c952f4010a14a436ea5e190de5d7fca" prot="private" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string mylog::SensorLogger::FILENAME</definition>
+        <argsstring></argsstring>
+        <name>FILENAME</name>
+        <qualifiedname>mylog::SensorLogger::FILENAME</qualifiedname>
+        <initializer>= &quot;logs_from_sensors.log&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="75" column="26" bodyfile="src/log.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmylog_1_1_sensor_logger_1a277a27004c190cee7a1b8ade873b0a91" prot="private" static="no" mutable="no">
+        <type><ref refid="classmyds_1_1_linked_list" kindref="compound">myds::LinkedList</ref>&lt; <ref refid="structmylog_1_1_log_entry" kindref="compound">LogEntry</ref> &gt;</type>
+        <definition>myds::LinkedList&lt;LogEntry&gt; mylog::SensorLogger::logs</definition>
+        <argsstring></argsstring>
+        <name>logs</name>
+        <qualifiedname>mylog::SensorLogger::logs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="76" column="18" bodyfile="src/log.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmylog_1_1_sensor_logger_1a3dcbc14787e42c4a501ee27fffd20f4a" prot="private" static="no" mutable="no">
+        <type>std::fstream</type>
+        <definition>std::fstream mylog::SensorLogger::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <qualifiedname>mylog::SensorLogger::file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="77" column="14" bodyfile="src/log.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1aaaafca1143ba12587a3e8c55628571ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mylog::SensorLogger::SensorLogger</definition>
+        <argsstring>()</argsstring>
+        <name>SensorLogger</name>
+        <qualifiedname>mylog::SensorLogger::SensorLogger</qualifiedname>
+        <briefdescription>
+<para>Prywanty konstruktor, ograniczający możliwość tworzenia nowych instancji klasy. Otwiera strumień do pliku .log. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Prywanty konstruktor, ograniczający możliwość tworzenia nowych instancji klasy. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="82" column="1" bodyfile="src/log.cpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a7a0b20fae29f9a7362376399c0393d4c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mylog::SensorLogger::~SensorLogger</definition>
+        <argsstring>()</argsstring>
+        <name>~SensorLogger</name>
+        <qualifiedname>mylog::SensorLogger::~SensorLogger</qualifiedname>
+        <briefdescription>
+<para>Prywanty Destruktor, zapisuje wszystkie logi do pliku i zamyka strumień. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="87" column="1" bodyfile="src/log.cpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a4acd883c1aeb3465978aabaa63e0241e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mylog::SensorLogger::SensorLogger</definition>
+        <argsstring>(const SensorLogger &amp;other_logger)=delete</argsstring>
+        <name>SensorLogger</name>
+        <qualifiedname>mylog::SensorLogger::SensorLogger</qualifiedname>
+        <param>
+          <type>const SensorLogger &amp;</type>
+          <declname>other_logger</declname>
+        </param>
+        <briefdescription>
+<para>Blokuje możliwość kopiowania (tworzenia kopii). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a6f9ecbf6fb3f26fe9f489712bf877d39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SensorLogger &amp;</type>
+        <definition>SensorLogger &amp; mylog::SensorLogger::operator=</definition>
+        <argsstring>(const SensorLogger &amp;other_logger)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>mylog::SensorLogger::operator=</qualifiedname>
+        <param>
+          <type>const SensorLogger &amp;</type>
+          <declname>other_logger</declname>
+        </param>
+        <briefdescription>
+<para>Blokuje możliwość przypisywania (nadpisywania danymi innej istancji). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="97" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1af24a8ff4386263b1940902cfc82f6cdd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SensorLogger &amp;</type>
+        <definition>mylog::SensorLogger &amp; mylog::SensorLogger::getSingleton</definition>
+        <argsstring>()</argsstring>
+        <name>getSingleton</name>
+        <qualifiedname>mylog::SensorLogger::getSingleton</qualifiedname>
+        <briefdescription>
+<para>Zwraca/inicjalizuje loggera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Instancja loggera. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="104" column="21" bodyfile="src/log.cpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a9dc46f12e24414a262901095448783e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mylog::SensorLogger::loadFromFile</definition>
+        <argsstring>()</argsstring>
+        <name>loadFromFile</name>
+        <qualifiedname>mylog::SensorLogger::loadFromFile</qualifiedname>
+        <briefdescription>
+<para>Wczytaj logi z pliku teskstowego. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="109" column="6" bodyfile="src/log.cpp" bodystart="82" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1aa3482d7c2ba9cc6ed9d31b201f4d9299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mylog::SensorLogger::saveToFile</definition>
+        <argsstring>()</argsstring>
+        <name>saveToFile</name>
+        <qualifiedname>mylog::SensorLogger::saveToFile</qualifiedname>
+        <briefdescription>
+<para>Zapisuje logi do pliku teskstowego. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="114" column="6" bodyfile="src/log.cpp" bodystart="106" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1ac19cf1040b71784f4791f16e93fdf7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mylog::SensorLogger::createLog</definition>
+        <argsstring>(const int &amp;sensor_id, const std::string &amp;msg, const double &amp;read_value, const LogType &amp;log_type)</argsstring>
+        <name>createLog</name>
+        <qualifiedname>mylog::SensorLogger::createLog</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>sensor_id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>read_value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69" kindref="member">LogType</ref> &amp;</type>
+          <declname>log_type</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy nowego loga i dodaje go do listy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identyfikator czujnika. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dodatkowa wiadomość. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>read_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odczytana wartość z czujnika. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Typ wiadomości. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="123" column="6" bodyfile="src/log.cpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a8056e5fa2cee98fe36ece54f0bbff502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mylog::SensorLogger::createLog</definition>
+        <argsstring>(mylog::LogEntry &amp;log)</argsstring>
+        <name>createLog</name>
+        <qualifiedname>mylog::SensorLogger::createLog</qualifiedname>
+        <param>
+          <type><ref refid="structmylog_1_1_log_entry" kindref="compound">mylog::LogEntry</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy nowego loga i dodaje go do listy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dane związane z logiem. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="129" column="6" bodyfile="src/log.cpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a250989418c3697e91ce592c556202234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mylog::SensorLogger::createLog</definition>
+        <argsstring>(mylog::LogEntry &amp;&amp;log)</argsstring>
+        <name>createLog</name>
+        <qualifiedname>mylog::SensorLogger::createLog</qualifiedname>
+        <param>
+          <type><ref refid="structmylog_1_1_log_entry" kindref="compound">mylog::LogEntry</ref> &amp;&amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy nowego loga i dodaje go do listy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dane związane z logiem. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="135" column="6" bodyfile="src/log.cpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classmylog_1_1_sensor_logger_1a49aa37e2ac70a523d489502d0de65cb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmyds_1_1_custom_vector" kindref="compound">myds::CustomVector</ref>&lt; <ref refid="structmylog_1_1_log_entry" kindref="compound">LogEntry</ref> &gt;</type>
+        <definition>myds::CustomVector&lt; mylog::LogEntry &gt; mylog::SensorLogger::filter</definition>
+        <argsstring>(const std::function&lt; bool(LogEntry &amp;)&gt; &amp;predicate) const</argsstring>
+        <name>filter</name>
+        <qualifiedname>mylog::SensorLogger::filter</qualifiedname>
+        <param>
+          <type>const std::function&lt; bool(<ref refid="structmylog_1_1_log_entry" kindref="compound">LogEntry</ref> &amp;)&gt; &amp;</type>
+          <declname>predicate</declname>
+        </param>
+        <briefdescription>
+<para>Zwraca elementy spełniające podany predykat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>predicate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Predykat. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Wektor elementów będących częścią listy. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="142" column="20" bodyfile="src/log.cpp" bodystart="185" bodyend="194"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/log.hpp" line="73" column="1" bodyfile="src/log.hpp" bodystart="73" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classmylog_1_1_sensor_logger_1ac19cf1040b71784f4791f16e93fdf7f7" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>createLog</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a8056e5fa2cee98fe36ece54f0bbff502" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>createLog</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a250989418c3697e91ce592c556202234" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>createLog</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a3dcbc14787e42c4a501ee27fffd20f4a" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>file</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a0c952f4010a14a436ea5e190de5d7fca" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>FILENAME</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a49aa37e2ac70a523d489502d0de65cb4" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>filter</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1af24a8ff4386263b1940902cfc82f6cdd" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>getSingleton</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a9dc46f12e24414a262901095448783e9" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>loadFromFile</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a277a27004c190cee7a1b8ade873b0a91" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>logs</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a6f9ecbf6fb3f26fe9f489712bf877d39" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>operator=</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1aa3482d7c2ba9cc6ed9d31b201f4d9299" prot="public" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>saveToFile</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1aaaafca1143ba12587a3e8c55628571ea" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>SensorLogger</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a4acd883c1aeb3465978aabaa63e0241e" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>SensorLogger</name></member>
+      <member refid="classmylog_1_1_sensor_logger_1a7a0b20fae29f9a7362376399c0393d4c" prot="private" virt="non-virtual"><scope>mylog::SensorLogger</scope><name>~SensorLogger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

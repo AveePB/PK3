@@ -1,0 +1,155 @@
+.TH "myds::LinkedList< T >" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+myds::LinkedList< T > \- Własna implementacja listy jednokierunkowej\&. To kontener LIFO (Last in first out)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ds\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIterator\fP"
+.br
+.RI "Własna implementacja iteratora do struktury \fBLinkedList\fP\&. Służy nam do łatwego dostępu do danych\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinkedList\fP ()"
+.br
+.ti -1c
+.RI "\fBLinkedList\fP (const LinkedList &other_list)=delete"
+.br
+.RI "Konstruktor kopiujący, zablokowany\&. "
+.ti -1c
+.RI "\fBLinkedList\fP (const LinkedList &&other_list)=delete"
+.br
+.RI "Konstruktor przenoszący, zablokowany\&. "
+.ti -1c
+.RI "void \fBadd\fP (const T &value)"
+.br
+.RI "Dodaje nowy element na samą górę listy\&. "
+.ti -1c
+.RI "void \fBadd\fP (T &&value)"
+.br
+.RI "Przenosi nową wartość i dodaje węzeł na górę listy\&. "
+.ti -1c
+.RI "void \fBpop\fP ()"
+.br
+.RI "Usuwa pierwszy element listy\&. "
+.ti -1c
+.RI "bool \fBempty\fP ()"
+.br
+.RI "Sprawdza czy lista jest pusta\&. "
+.ti -1c
+.RI "\fBIterator\fP \fBbegin\fP () const"
+.br
+.RI "Tworzy iterator będący na pierwszym elemencie\&. "
+.ti -1c
+.RI "\fBIterator\fP \fBend\fP () const"
+.br
+.RI "Tworzy iterator będący na końcu kontenera\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class myds::LinkedList< T >"Własna implementacja listy jednokierunkowej\&. To kontener LIFO (Last in first out)\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T> \fBmyds::LinkedList\fP< T >::LinkedList ()\fR [inline]\fP"
+
+.SS "template<typename T> \fBmyds::LinkedList\fP< T >::LinkedList (const LinkedList< T > & other_list)\fR [delete]\fP"
+
+.PP
+Konstruktor kopiujący, zablokowany\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_list\fP Inna lista\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBmyds::LinkedList\fP< T >::LinkedList (const LinkedList< T > && other_list)\fR [delete]\fP"
+
+.PP
+Konstruktor przenoszący, zablokowany\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_list\fP Inna lista\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T> void \fBmyds::LinkedList\fP< T >::add (const T & value)\fR [inline]\fP"
+
+.PP
+Dodaje nowy element na samą górę listy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Wartość nowego węzła\&. 
+.RE
+.PP
+
+.SS "template<typename T> void \fBmyds::LinkedList\fP< T >::add (T && value)\fR [inline]\fP"
+
+.PP
+Przenosi nową wartość i dodaje węzeł na górę listy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Wartość nowego węzła\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP \fBmyds::LinkedList\fP< T >::begin () const\fR [inline]\fP"
+
+.PP
+Tworzy iterator będący na pierwszym elemencie\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP na pierwszym elemencie\&. 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBmyds::LinkedList\fP< T >::empty ()\fR [inline]\fP"
+
+.PP
+Sprawdza czy lista jest pusta\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Prawda/Fałsz\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP \fBmyds::LinkedList\fP< T >::end () const\fR [inline]\fP"
+
+.PP
+Tworzy iterator będący na końcu kontenera\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP na końcu kontenera\&. 
+.RE
+.PP
+
+.SS "template<typename T> void \fBmyds::LinkedList\fP< T >::pop ()\fR [inline]\fP"
+
+.PP
+Usuwa pierwszy element listy\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

@@ -1,0 +1,50 @@
+.TH "mylog" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mylog \- Przestrzeń nazw przechowywująca loggera będącego singletonem\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBLogEntry\fP"
+.br
+.RI "Zbiór informacji dotyczących loga\&. "
+.ti -1c
+.RI "class \fBSensorLogger\fP"
+.br
+.RI "Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBLogType\fP { \fBinfo\fP = 1, \fBdebug\fP = 2, \fBwarning\fP = 3 }"
+.br
+.RI "Przechowuje informacje jaki to jest typ wiadomości info-informacja, debug-debugowanie, warning-ostrzeżenie\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Przestrzeń nazw przechowywująca loggera będącego singletonem\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBmylog::LogType\fP"
+
+.PP
+Przechowuje informacje jaki to jest typ wiadomości info-informacja, debug-debugowanie, warning-ostrzeżenie\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIinfo \fP
+.TP
+\f(BIdebug \fP
+.TP
+\f(BIwarning \fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

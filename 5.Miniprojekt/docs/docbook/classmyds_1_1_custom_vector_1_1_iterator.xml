@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmyds_1_1_custom_vector_1_1_iterator" xml:lang="en-US">
+<title>myds::CustomVector&lt; T &gt;::Iterator Class Reference</title>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary></indexterm>
+<para>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_custom_vector">CustomVector</link>. Służy nam do łatwego dostępu do danych. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ds.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> ()=delete</para>
+
+<para>Konstruktor domyślny, zablokowany. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1aa0c104bb52f2d12e6b11fc0a1caf7849">Iterator</link> (T *arr, size_t size, bool is_end=false)</para>
+
+<para>Konstruktor inicjalizujący itearator. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1ae4bf3db1e6f1e4803941bf1c8c8440df">next</link> ()</para>
+
+<para>Przechodzi do kolejnego elementu wektora. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a993711002dd38d7d156af977949db231">operator*</link> ()</para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1ab1d43d9f1b5bbcd38db1b71db1cf040f">operator*</link> () const</para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a018892a476108f52c7842ae23454b986">operator++</link> ()</para>
+
+<para>Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1aab3681e1a159c5b44280b1454d1a84a6">operator++</link> (int)</para>
+
+<para>Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a9d42d8a47ad9b09eec392809780e2f3c">operator==</link> (const <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp;other_iter) const</para>
+
+<para>Nadpisany operator przyrównania (==), który porównuje wartości indeksów. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a83d299d74773f92d7ed5cd7e980847cd">operator!=</link> (const <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp;other_iter) const</para>
+
+<para>Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class myds::CustomVector&lt; T &gt;::Iterator</title></simplesect>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_custom_vector">CustomVector</link>. Służy nam do łatwego dostępu do danych. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1"/><section>
+    <title>Iterator()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Iterator</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>Iterator</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::Iterator ( )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>Konstruktor domyślny, zablokowany. </para>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1aa0c104bb52f2d12e6b11fc0a1caf7849"/><section>
+    <title>Iterator()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Iterator</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>Iterator</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::Iterator (T * arr, size_t size, bool is_end = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Konstruktor inicjalizujący itearator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>arr</entry><entry>
+<para>Wskaźnik do tablicy. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Rozmiar wektora. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_end</entry><entry>
+<para>Mówi nam czy tworzyć iterator do końca kontenera. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1ae4bf3db1e6f1e4803941bf1c8c8440df"/><section>
+    <title>next()</title>
+<indexterm><primary>next</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>next</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::next ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Przechodzi do kolejnego elementu wektora. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> do kolejnego elementu. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1a83d299d74773f92d7ed5cd7e980847cd"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::operator!= (const <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; other_iter) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_iter</entry><entry>
+<para>Inny iterator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Prawda/Fałsz </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1a993711002dd38d7d156af977949db231"/><section>
+    <title>operator*()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator*</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::operator* ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Wartość elementu wektora. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1ab1d43d9f1b5bbcd38db1b71db1cf040f"/><section>
+    <title>operator*()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator*</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::operator* ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Wartość elementu wektora </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1a018892a476108f52c7842ae23454b986"/><section>
+    <title>operator++()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> do kolejnego elementu. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1aab3681e1a159c5b44280b1454d1a84a6"/><section>
+    <title>operator++()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::operator++ (int )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> do kolejnego elementu. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1_1_iterator_1a9d42d8a47ad9b09eec392809780e2f3c"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>myds::CustomVector&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;::Iterator</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::Iterator::operator== (const <link linkend="_classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1">Iterator</link> &amp; other_iter) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator przyrównania (==), który porównuje wartości indeksów. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_iter</entry><entry>
+<para>Inny iterator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Prawda/Fałsz </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_ds_8hpp">ds.hpp</link></section>
+</section>

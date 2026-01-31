@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="classmyds_1_1_linked_list_1_1_iterator" kind="class" language="C++" prot="public">
+    <compoundname>myds::LinkedList::Iterator</compoundname>
+    <includes refid="ds_8hpp" local="no">ds.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmyds_1_1_linked_list_1_1_iterator_1a73d6419ef52274affe0826dc47a1de3c" prot="private" static="no" mutable="no">
+        <type>Node *</type>
+        <definition>Node* myds::LinkedList&lt; T &gt;::Iterator::curr_node</definition>
+        <argsstring></argsstring>
+        <name>curr_node</name>
+        <qualifiedname>myds::LinkedList::Iterator::curr_node</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="372" column="6" bodyfile="src/ds.hpp" bodystart="372" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>myds::LinkedList&lt; T &gt;::Iterator::Iterator</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Iterator</name>
+        <qualifiedname>myds::LinkedList::Iterator::Iterator</qualifiedname>
+        <briefdescription>
+<para>Konstruktor domyślny, zablokowany. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="378" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a5ab7a7567536bebd3d39ceff7a9f363c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myds::LinkedList&lt; T &gt;::Iterator::Iterator</definition>
+        <argsstring>(Node *curr_node)</argsstring>
+        <name>Iterator</name>
+        <qualifiedname>myds::LinkedList::Iterator::Iterator</qualifiedname>
+        <param>
+          <type>Node *</type>
+          <declname>curr_node</declname>
+        </param>
+        <briefdescription>
+<para>Konstruktor inicjalizujący itearator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>curr_node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wskaźnik podglądowy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="384" column="1" bodyfile="src/ds.hpp" bodystart="384" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" kindref="member">Iterator</ref> &amp;</type>
+        <definition>Iterator &amp; myds::LinkedList&lt; T &gt;::Iterator::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <qualifiedname>myds::LinkedList::Iterator::next</qualifiedname>
+        <briefdescription>
+<para>Przechodzi do kolejnego elementu Listy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref> do kolejnego elementu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="390" column="10" bodyfile="src/ds.hpp" bodystart="390" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a078ef160f6fc854af129b01c5b8b2c8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; myds::LinkedList&lt; T &gt;::Iterator::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <qualifiedname>myds::LinkedList::Iterator::operator*</qualifiedname>
+        <briefdescription>
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Wartość elementu listy. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="399" column="3" bodyfile="src/ds.hpp" bodystart="399" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a90dd7aa65d5e5f1bd9a21298835058da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T &amp; myds::LinkedList&lt; T &gt;::Iterator::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>myds::LinkedList::Iterator::operator*</qualifiedname>
+        <briefdescription>
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Wartość elementu listy. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="405" column="9" bodyfile="src/ds.hpp" bodystart="405" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a9ce7fa2088add3c0d672695bfd96ddfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" kindref="member">Iterator</ref> &amp;</type>
+        <definition>Iterator &amp; myds::LinkedList&lt; T &gt;::Iterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>myds::LinkedList::Iterator::operator++</qualifiedname>
+        <briefdescription>
+<para>Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref> do kolejnego elementu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="411" column="10" bodyfile="src/ds.hpp" bodystart="411" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1aff31a9574310ad48ca50843c21181465" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" kindref="member">Iterator</ref> &amp;</type>
+        <definition>Iterator &amp; myds::LinkedList&lt; T &gt;::Iterator::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <qualifiedname>myds::LinkedList::Iterator::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref> do kolejnego elementu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="417" column="10" bodyfile="src/ds.hpp" bodystart="417" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1adbe0827568799b8c29a4c7022ae0e5ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myds::LinkedList&lt; T &gt;::Iterator::operator==</definition>
+        <argsstring>(const Iterator &amp;other_iter) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>myds::LinkedList::Iterator::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" kindref="member">Iterator</ref> &amp;</type>
+          <declname>other_iter</declname>
+        </param>
+        <briefdescription>
+<para>Nadpisany operator przyrównania (==), który porównuje wskaźniki. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_iter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inny iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Prawda/Fałsz </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="424" column="6" bodyfile="src/ds.hpp" bodystart="424" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1_1_iterator_1a1f2cda855399ecd51968ed757edc3406" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myds::LinkedList&lt; T &gt;::Iterator::operator!=</definition>
+        <argsstring>(const Iterator &amp;other_iter) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>myds::LinkedList::Iterator::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" kindref="member">Iterator</ref> &amp;</type>
+          <declname>other_iter</declname>
+        </param>
+        <briefdescription>
+<para>Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_iter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inny iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Prawda/Fałsz </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="431" column="6" bodyfile="src/ds.hpp" bodystart="431" bodyend="431"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Własna implementacja iteratora do struktury <ref refid="classmyds_1_1_linked_list" kindref="compound">LinkedList</ref>. Służy nam do łatwego dostępu do danych. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/ds.hpp" line="370" column="1" bodyfile="src/ds.hpp" bodystart="370" bodyend="432"/>
+    <listofallmembers>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a73d6419ef52274affe0826dc47a1de3c" prot="private" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>curr_node</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>Iterator</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a5ab7a7567536bebd3d39ceff7a9f363c" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>Iterator</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>next</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a1f2cda855399ecd51968ed757edc3406" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>operator!=</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a078ef160f6fc854af129b01c5b8b2c8f" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>operator*</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a90dd7aa65d5e5f1bd9a21298835058da" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>operator*</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1a9ce7fa2088add3c0d672695bfd96ddfd" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>operator++</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1aff31a9574310ad48ca50843c21181465" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>operator++</name></member>
+      <member refid="classmyds_1_1_linked_list_1_1_iterator_1adbe0827568799b8c29a4c7022ae0e5ed" prot="public" virt="non-virtual"><scope>myds::LinkedList::Iterator</scope><name>operator==</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

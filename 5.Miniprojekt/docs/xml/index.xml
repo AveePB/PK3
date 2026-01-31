@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
+  <compound refid="classmyds_1_1_custom_vector" kind="class"><name>myds::CustomVector</name>
+    <member refid="classmyds_1_1_custom_vector_1ac84e8b9c836c36c893dd32f37021a357" kind="variable"><name>DEFAULT_CAPACITY</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a96133b28b7de5ac9a54bdaaa403f66e8" kind="variable"><name>actual_capacity</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a9cca3c091612551eb23ad9716f0a1fc6" kind="variable"><name>n_elements</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a7043624c1c8b489438401a475a9c333a" kind="variable"><name>arr</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a3b0f49c9b5772b837f1bc2d6009aa1a2" kind="function"><name>extendArray</name></member>
+    <member refid="classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a" kind="function"><name>CustomVector</name></member>
+    <member refid="classmyds_1_1_custom_vector_1ac8eacabb336c6abf0db376aec312e776" kind="function"><name>CustomVector</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a6d0f7cf930201dd64eba6ebbd4204475" kind="function"><name>CustomVector</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a8b6e3b90297b0d9c8ca71346487711c7" kind="function"><name>CustomVector</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a9d93bbdf4acb4fdac75829be4dd01cb5" kind="function"><name>~CustomVector</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a507b0a70726c7c49b0173eb919b7ec95" kind="function"><name>size</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a62e1038822a2e7ac9b32823acad1ac59" kind="function"><name>pushBack</name></member>
+    <member refid="classmyds_1_1_custom_vector_1adbdd13f1854bb1f0e5a4047107cf8f86" kind="function"><name>pushBack</name></member>
+    <member refid="classmyds_1_1_custom_vector_1ab7e4f043cf7cdee1466ad5124c1dc21b" kind="function"><name>clear</name></member>
+    <member refid="classmyds_1_1_custom_vector_1ab537ed8930c324eb0671c82eac798a80" kind="function"><name>empty</name></member>
+    <member refid="classmyds_1_1_custom_vector_1afc1bacda5f5b4b230142b275ea087b32" kind="function"><name>at</name></member>
+    <member refid="classmyds_1_1_custom_vector_1ad1d07672154684115d942fc5681c1681" kind="function"><name>operator[]</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a22c7212f1249faa93085509d977ca6d0" kind="function"><name>operator[]</name></member>
+    <member refid="classmyds_1_1_custom_vector_1ab3942ce83d6bf5f3ae9ea84102a5a4df" kind="function"><name>operator=</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a7df3f5b6a50887eda8228ce81d9cd3d7" kind="function"><name>begin</name></member>
+    <member refid="classmyds_1_1_custom_vector_1a1752a6192c837d878923af13431e9553" kind="function"><name>end</name></member>
+  </compound>
+  <compound refid="classmyds_1_1_custom_vector_1_1_iterator" kind="class"><name>myds::CustomVector::Iterator</name>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a39f15f282a6e0a57d8877366af7c8944" kind="variable"><name>arr</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a9291dfe227a214f621f9ae155d6a7ab9" kind="variable"><name>idx</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a1b717ed4ca3b4c0d0f6242d26bb0c80b" kind="variable"><name>size</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a8c5453dcd8adf50fb348eb1f4d6987b1" kind="function"><name>Iterator</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1aa0c104bb52f2d12e6b11fc0a1caf7849" kind="function"><name>Iterator</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1ae4bf3db1e6f1e4803941bf1c8c8440df" kind="function"><name>next</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a993711002dd38d7d156af977949db231" kind="function"><name>operator*</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1ab1d43d9f1b5bbcd38db1b71db1cf040f" kind="function"><name>operator*</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a018892a476108f52c7842ae23454b986" kind="function"><name>operator++</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1aab3681e1a159c5b44280b1454d1a84a6" kind="function"><name>operator++</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a9d42d8a47ad9b09eec392809780e2f3c" kind="function"><name>operator==</name></member>
+    <member refid="classmyds_1_1_custom_vector_1_1_iterator_1a83d299d74773f92d7ed5cd7e980847cd" kind="function"><name>operator!=</name></member>
+  </compound>
+  <compound refid="classmyds_1_1_linked_list_1_1_iterator" kind="class"><name>myds::LinkedList::Iterator</name>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a73d6419ef52274affe0826dc47a1de3c" kind="variable"><name>curr_node</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd" kind="function"><name>Iterator</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a5ab7a7567536bebd3d39ceff7a9f363c" kind="function"><name>Iterator</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed" kind="function"><name>next</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a078ef160f6fc854af129b01c5b8b2c8f" kind="function"><name>operator*</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a90dd7aa65d5e5f1bd9a21298835058da" kind="function"><name>operator*</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a9ce7fa2088add3c0d672695bfd96ddfd" kind="function"><name>operator++</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1aff31a9574310ad48ca50843c21181465" kind="function"><name>operator++</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1adbe0827568799b8c29a4c7022ae0e5ed" kind="function"><name>operator==</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_iterator_1a1f2cda855399ecd51968ed757edc3406" kind="function"><name>operator!=</name></member>
+  </compound>
+  <compound refid="classmyds_1_1_linked_list" kind="class"><name>myds::LinkedList</name>
+    <member refid="classmyds_1_1_linked_list_1ab40ae9a1cf16122a38e8aec830a761d5" kind="variable"><name>head</name></member>
+    <member refid="classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f" kind="function"><name>LinkedList</name></member>
+    <member refid="classmyds_1_1_linked_list_1addd35e4fc18b445953f5a2ca9ea54697" kind="function"><name>LinkedList</name></member>
+    <member refid="classmyds_1_1_linked_list_1aec9618b48dd71b081764927712864227" kind="function"><name>LinkedList</name></member>
+    <member refid="classmyds_1_1_linked_list_1a234bfe6b6f71189e74d89dc425b01d39" kind="function"><name>add</name></member>
+    <member refid="classmyds_1_1_linked_list_1a1c054e0dcd57c7fcc69a983c58c32e6e" kind="function"><name>add</name></member>
+    <member refid="classmyds_1_1_linked_list_1a3021ae4f87c827af3eda1b0f4f061836" kind="function"><name>pop</name></member>
+    <member refid="classmyds_1_1_linked_list_1ab3c3c12151136406aad5e5d6b2bf65f1" kind="function"><name>empty</name></member>
+    <member refid="classmyds_1_1_linked_list_1a78c557fec0e51190a41b7628eb7f6597" kind="function"><name>begin</name></member>
+    <member refid="classmyds_1_1_linked_list_1ab1858cd0cc8a5051619022e1517787ca" kind="function"><name>end</name></member>
+  </compound>
+  <compound refid="structmylog_1_1_log_entry" kind="struct"><name>mylog::LogEntry</name>
+    <member refid="structmylog_1_1_log_entry_1a4af0f096d6bbddad6b39e401a6b0f73e" kind="variable"><name>sensor_id</name></member>
+    <member refid="structmylog_1_1_log_entry_1aa18b3d706aa82ce889e8783be9290dc7" kind="variable"><name>msg</name></member>
+    <member refid="structmylog_1_1_log_entry_1aaca72591b8236fd01f120e898a09442c" kind="variable"><name>read_value</name></member>
+    <member refid="structmylog_1_1_log_entry_1a2aaee7bccdddb47ac4d457497f29f292" kind="variable"><name>date</name></member>
+    <member refid="structmylog_1_1_log_entry_1afe38065421905ce88a1b3b3faa908db9" kind="variable"><name>log_type</name></member>
+    <member refid="structmylog_1_1_log_entry_1a84b534db11789de846bc7475019c79da" kind="function"><name>LogEntry</name></member>
+    <member refid="structmylog_1_1_log_entry_1a337b6acdab43982189f19a9e161a70bf" kind="function"><name>LogEntry</name></member>
+    <member refid="structmylog_1_1_log_entry_1add784da497920267e5874edfbfd576a9" kind="function"><name>setDate</name></member>
+    <member refid="structmylog_1_1_log_entry_1af87b9d821b9767aaff8a67137c321b29" kind="function"><name>toString</name></member>
+    <member refid="structmylog_1_1_log_entry_1aa4a2a534c7c72f8d3d01004a6abd1b0d" kind="function"><name>operator=</name></member>
+    <member refid="structmylog_1_1_log_entry_1a4d25cbe2a0aa279bf26057030850841a" kind="function"><name>parseLine</name></member>
+  </compound>
+  <compound refid="classmyds_1_1_linked_list_1_1_node" kind="class"><name>myds::LinkedList::Node</name>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1ac41f19f060089473854d0a41815f8c96" kind="variable"><name>next</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1a820c3eb64c02e3f53d5ec4d82299d303" kind="variable"><name>value</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1a8c294e1b9542b299f852e8344bf4a183" kind="function"><name>Node</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1ab3a5190e19f72fe6c5b8b948d754d011" kind="function"><name>Node</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1ae860c5b18b3c207f31e4d2ade11ede79" kind="function"><name>Node</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1afabe1e9712ab7d7f38b17f5e25543519" kind="function"><name>Node</name></member>
+    <member refid="classmyds_1_1_linked_list_1_1_node_1a0507538c6f9cbfd8345fda70de9f30f9" kind="function"><name>Node</name></member>
+  </compound>
+  <compound refid="classmylog_1_1_sensor_logger" kind="class"><name>mylog::SensorLogger</name>
+    <member refid="classmylog_1_1_sensor_logger_1a0c952f4010a14a436ea5e190de5d7fca" kind="variable"><name>FILENAME</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a277a27004c190cee7a1b8ade873b0a91" kind="variable"><name>logs</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a3dcbc14787e42c4a501ee27fffd20f4a" kind="variable"><name>file</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1aaaafca1143ba12587a3e8c55628571ea" kind="function"><name>SensorLogger</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a7a0b20fae29f9a7362376399c0393d4c" kind="function"><name>~SensorLogger</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a4acd883c1aeb3465978aabaa63e0241e" kind="function"><name>SensorLogger</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a6f9ecbf6fb3f26fe9f489712bf877d39" kind="function"><name>operator=</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1af24a8ff4386263b1940902cfc82f6cdd" kind="function"><name>getSingleton</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a9dc46f12e24414a262901095448783e9" kind="function"><name>loadFromFile</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1aa3482d7c2ba9cc6ed9d31b201f4d9299" kind="function"><name>saveToFile</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1ac19cf1040b71784f4791f16e93fdf7f7" kind="function"><name>createLog</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a8056e5fa2cee98fe36ece54f0bbff502" kind="function"><name>createLog</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a250989418c3697e91ce592c556202234" kind="function"><name>createLog</name></member>
+    <member refid="classmylog_1_1_sensor_logger_1a49aa37e2ac70a523d489502d0de65cb4" kind="function"><name>filter</name></member>
+  </compound>
+  <compound refid="namespacemyds" kind="namespace"><name>myds</name>
+  </compound>
+  <compound refid="namespacemylog" kind="namespace"><name>mylog</name>
+    <member refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69" kind="enum"><name>LogType</name></member>
+    <member refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a8ce81acf0dfbba71ad421525a04b345d" kind="enumvalue"><name>info</name></member>
+    <member refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a6f83a2fe78017613c275982f9982ed57" kind="enumvalue"><name>debug</name></member>
+    <member refid="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a3aee7f26ad0c90d83fd3a5f29c17d5cf" kind="enumvalue"><name>warning</name></member>
+  </compound>
+  <compound refid="namespacemyui" kind="namespace"><name>myui</name>
+    <member refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495" kind="enum"><name>AppMode</name></member>
+    <member refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170" kind="enumvalue"><name>CREATE_LOG</name></member>
+    <member refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd" kind="enumvalue"><name>READ_LOGS</name></member>
+    <member refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d" kind="enumvalue"><name>SAVE_LOGS_TO_FILE</name></member>
+    <member refid="namespacemyui_1abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6" kind="enumvalue"><name>QUIT_APP</name></member>
+    <member refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944" kind="enum"><name>ReadMode</name></member>
+    <member refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022" kind="enumvalue"><name>ALL_LOGS</name></member>
+    <member refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44" kind="enumvalue"><name>ONLY_INFO</name></member>
+    <member refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060" kind="enumvalue"><name>ONLY_DEBUG</name></member>
+    <member refid="namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf" kind="enumvalue"><name>ONLY_WARN</name></member>
+    <member refid="namespacemyui_1a44b76e3e17b467d90f3e43711038e0a6" kind="function"><name>printMenu</name></member>
+    <member refid="namespacemyui_1a3834204fdd8708a44e5705025b98070e" kind="function"><name>createLog</name></member>
+    <member refid="namespacemyui_1afcf399bf272e6a1e927cd96350d6209f" kind="function"><name>readLogs</name></member>
+    <member refid="namespacemyui_1a07b62b3e3c50f159bd3d2eeb27356b9d" kind="function"><name>saveLogsToFile</name></member>
+  </compound>
+  <compound refid="ds_8hpp" kind="file"><name>ds.hpp</name>
+  </compound>
+  <compound refid="log_8cpp" kind="file"><name>log.cpp</name>
+  </compound>
+  <compound refid="log_8hpp" kind="file"><name>log.hpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="ui_8cpp" kind="file"><name>ui.cpp</name>
+  </compound>
+  <compound refid="ui_8hpp" kind="file"><name>ui.hpp</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

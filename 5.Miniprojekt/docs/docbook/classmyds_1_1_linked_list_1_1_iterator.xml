@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmyds_1_1_linked_list_1_1_iterator" xml:lang="en-US">
+<title>myds::LinkedList&lt; T &gt;::Iterator Class Reference</title>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary></indexterm>
+<para>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_linked_list">LinkedList</link>. Służy nam do łatwego dostępu do danych. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ds.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> ()=delete</para>
+
+<para>Konstruktor domyślny, zablokowany. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a5ab7a7567536bebd3d39ceff7a9f363c">Iterator</link> (Node *curr_node)</para>
+
+<para>Konstruktor inicjalizujący itearator. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed">next</link> ()</para>
+
+<para>Przechodzi do kolejnego elementu Listy. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a078ef160f6fc854af129b01c5b8b2c8f">operator*</link> ()</para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a90dd7aa65d5e5f1bd9a21298835058da">operator*</link> () const</para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a9ce7fa2088add3c0d672695bfd96ddfd">operator++</link> ()</para>
+
+<para>Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1aff31a9574310ad48ca50843c21181465">operator++</link> (int)</para>
+
+<para>Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1adbe0827568799b8c29a4c7022ae0e5ed">operator==</link> (const <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp;other_iter) const</para>
+
+<para>Nadpisany operator przyrównania (==), który porównuje wskaźniki. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a1f2cda855399ecd51968ed757edc3406">operator!=</link> (const <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp;other_iter) const</para>
+
+<para>Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class myds::LinkedList&lt; T &gt;::Iterator</title></simplesect>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_linked_list">LinkedList</link>. Służy nam do łatwego dostępu do danych. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd"/><section>
+    <title>Iterator()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Iterator</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>Iterator</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::Iterator ( )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>Konstruktor domyślny, zablokowany. </para>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a5ab7a7567536bebd3d39ceff7a9f363c"/><section>
+    <title>Iterator()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Iterator</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>Iterator</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::Iterator (Node * curr_node)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Konstruktor inicjalizujący itearator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>curr_node</entry><entry>
+<para>Wskaźnik podglądowy. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a64296184e04b712f9deca42c14155eed"/><section>
+    <title>next()</title>
+<indexterm><primary>next</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>next</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::next ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Przechodzi do kolejnego elementu Listy. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link> do kolejnego elementu. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a1f2cda855399ecd51968ed757edc3406"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::operator!= (const <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; other_iter) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_iter</entry><entry>
+<para>Inny iterator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Prawda/Fałsz </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a078ef160f6fc854af129b01c5b8b2c8f"/><section>
+    <title>operator*()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator*</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::operator* ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Wartość elementu listy. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a90dd7aa65d5e5f1bd9a21298835058da"/><section>
+    <title>operator*()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator*</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::operator* ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Rozpakowywuje wartość chowaną pod konkretnym elementem. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Wartość elementu listy. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1a9ce7fa2088add3c0d672695bfd96ddfd"/><section>
+    <title>operator++()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link> do kolejnego elementu. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1aff31a9574310ad48ca50843c21181465"/><section>
+    <title>operator++()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::operator++ (int )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_linked_list_1_1_iterator">Iterator</link> do kolejnego elementu. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_linked_list_1_1_iterator_1adbe0827568799b8c29a4c7022ae0e5ed"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>myds::LinkedList&lt; T &gt;::Iterator</secondary></indexterm>
+<indexterm><primary>myds::LinkedList&lt; T &gt;::Iterator</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmyds_1_1_linked_list">myds::LinkedList</link>&lt; T &gt;::Iterator::operator== (const <link linkend="_classmyds_1_1_linked_list_1_1_iterator_1a23c8d10cc7bba00e86ac78f4253752dd">Iterator</link> &amp; other_iter) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator przyrównania (==), który porównuje wskaźniki. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_iter</entry><entry>
+<para>Inny iterator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Prawda/Fałsz </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_ds_8hpp">ds.hpp</link></section>
+</section>

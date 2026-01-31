@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ui_8hpp_source" xml:lang="en-US">
+<title>ui.hpp</title>
+<indexterm><primary>src/ui.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;UI_HPP</emphasis>
+2 <emphasis role="preprocessor">#define&#32;UI_HPP</emphasis>
+3 
+4 <emphasis role="comment">//&#32;Biblioteki</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+6 
+10 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacemyui">myui</link>&#32;{
+11 
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespacemyui_1abf88ef46d5552611fa142d7b022a8495">AppMode</link>&#32;{&#32;<link linkend="_namespacemyui_1abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170">CREATE_LOG</link>&#32;=&#32;1,&#32;<link linkend="_namespacemyui_1abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd">READ_LOGS</link>&#32;=&#32;2,&#32;<link linkend="_namespacemyui_1abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d">SAVE_LOGS_TO_FILE</link>&#32;=&#32;3,&#32;<link linkend="_namespacemyui_1abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6">QUIT_APP</link>&#32;=&#32;4&#32;};
+16 
+20 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944">ReadMode</link>&#32;{&#32;<link linkend="_namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022">ALL_LOGS</link>&#32;=&#32;1,&#32;<link linkend="_namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44">ONLY_INFO</link>&#32;=&#32;2,&#32;<link linkend="_namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060">ONLY_DEBUG</link>&#32;=&#32;3,&#32;<link linkend="_namespacemyui_1aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf">ONLY_WARN</link>&#32;=&#32;4&#32;};
+21 
+25 &#32;&#32;&#32;&#32;<link linkend="_namespacemyui_1abf88ef46d5552611fa142d7b022a8495">AppMode</link>&#32;<link linkend="_namespacemyui_1a44b76e3e17b467d90f3e43711038e0a6">printMenu</link>();
+26 
+30 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespacemyui_1a3834204fdd8708a44e5705025b98070e">createLog</link>();
+31 
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespacemyui_1afcf399bf272e6a1e927cd96350d6209f">readLogs</link>();
+36 
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespacemyui_1a07b62b3e3c50f159bd3d2eeb27356b9d">saveLogsToFile</link>();
+41 
+42 }
+43 <emphasis role="preprocessor">#endif&#32;</emphasis>
+</programlisting></section>

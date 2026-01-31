@@ -1,0 +1,316 @@
+\doxysection{myds::\+Custom\+Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmyds_1_1_custom_vector}{}\label{classmyds_1_1_custom_vector}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+
+
+Własna implementacja wektora z biblioteki STL.  
+
+
+
+
+{\ttfamily \+\#include $<$ds.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em Własna implementacja iteratora do struktury \doxylink{classmyds_1_1_custom_vector}{Custom\+Vector}. Służy nam do łatwego dostępu do danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}{Custom\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje kontener bez żadnych elementów domyślnie. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_ac8eacabb336c6abf0db376aec312e776}{Custom\+Vector}} (size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje tablicę kontenera na co najmniej n elementów. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_a6d0f7cf930201dd64eba6ebbd4204475}{Custom\+Vector}} (const Custom\+Vector$<$ T $>$ \&other\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Konsturktor kopiujący tworzący głęboką kopię. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_a8b6e3b90297b0d9c8ca71346487711c7}{Custom\+Vector}} (Custom\+Vector$<$ T $>$ \&\&other\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Konstruktor przenoszący, przenosi dane z innego obiektu i go przywaraca do postaci domyślnej. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_a9d93bbdf4acb4fdac75829be4dd01cb5}{\texorpdfstring{$\sim$}{\string~}\+Custom\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Usuwa zaalokowaną pamięć. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{classmyds_1_1_custom_vector_a507b0a70726c7c49b0173eb919b7ec95}{size}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca liczbę zapełnionych elementów kontenera. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmyds_1_1_custom_vector_a62e1038822a2e7ac9b32823acad1ac59}{push\+Back}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmyds_1_1_custom_vector_adbdd13f1854bb1f0e5a4047107cf8f86}{push\+Back}} (T \&\&val)
+\begin{DoxyCompactList}\small\item\em Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmyds_1_1_custom_vector_ab7e4f043cf7cdee1466ad5124c1dc21b}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Zwalania aktualnie zajmowaną pamięć i przywraca wektora do stanu domyślnego. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classmyds_1_1_custom_vector_ab537ed8930c324eb0671c82eac798a80}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza czy wektor jest pusty. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_afc1bacda5f5b4b230142b275ea087b32}{at}} (size\+\_\+t idx) const
+\begin{DoxyCompactList}\small\item\em Zwraca stałą wartość elementu wektora pod indeksem. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_ad1d07672154684115d942fc5681c1681}{operator\+[$\,$]\+}} (size\+\_\+t idx) const
+\begin{DoxyCompactList}\small\item\em Nadpisany operator, który zwraca stałą wartość elementu wektora pod indeksem. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_a22c7212f1249faa93085509d977ca6d0}{operator\+[$\,$]\+}} (size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Nadpisany operator, który zwraca referencję do elementu wektora pod indeksem. Używany jest do zmiany wartości elementu pod konkretnym indeksem. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}{Custom\+Vector}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_ab3942ce83d6bf5f3ae9ea84102a5a4df}{operator=}} (const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}{Custom\+Vector}}$<$ T $>$ \&other\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Tworzy głęboką kopię, czyli przepisuje wszystkie elementy innego wektora. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_custom_vector_a7df3f5b6a50887eda8228ce81d9cd3d7}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Tworzy iterator do pierwszego elementu wektora. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_custom_vector_a1752a6192c837d878923af13431e9553}{end}} () const
+\begin{DoxyCompactList}\small\item\em Tworzy iterator do końca wektora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class myds::\+\+Custom\+Vector$<$ T $>$}
+Własna implementacja wektora z biblioteki STL. 
+
+\label{doc-constructors}
+\Hypertarget{classmyds_1_1_custom_vector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!CustomVector@{CustomVector}}
+\index{CustomVector@{CustomVector}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CustomVector()}{CustomVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Custom\+Vector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicjalizuje kontener bez żadnych elementów domyślnie. 
+
+\Hypertarget{classmyds_1_1_custom_vector_ac8eacabb336c6abf0db376aec312e776}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!CustomVector@{CustomVector}}
+\index{CustomVector@{CustomVector}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CustomVector()}{CustomVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_ac8eacabb336c6abf0db376aec312e776} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Custom\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicjalizuje tablicę kontenera na co najmniej n elementów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Liczba elementów we wektorze. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_custom_vector_a6d0f7cf930201dd64eba6ebbd4204475}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!CustomVector@{CustomVector}}
+\index{CustomVector@{CustomVector}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CustomVector()}{CustomVector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a6d0f7cf930201dd64eba6ebbd4204475} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Custom\+Vector (\begin{DoxyParamCaption}\item[{const Custom\+Vector$<$ T $>$ \&}]{other\+\_\+vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konsturktor kopiujący tworzący głęboką kopię. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+vec} & Inny wektor na bazie którego tworzymy głęboką kopię. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_custom_vector_a8b6e3b90297b0d9c8ca71346487711c7}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!CustomVector@{CustomVector}}
+\index{CustomVector@{CustomVector}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CustomVector()}{CustomVector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a8b6e3b90297b0d9c8ca71346487711c7} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Custom\+Vector (\begin{DoxyParamCaption}\item[{Custom\+Vector$<$ T $>$ \&\&}]{other\+\_\+vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor przenoszący, przenosi dane z innego obiektu i go przywaraca do postaci domyślnej. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+vec} & Inny wektor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_custom_vector_a9d93bbdf4acb4fdac75829be4dd01cb5}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!````~CustomVector@{\texorpdfstring{$\sim$}{\string~}CustomVector}}
+\index{````~CustomVector@{\texorpdfstring{$\sim$}{\string~}CustomVector}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CustomVector()}{\string~CustomVector()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a9d93bbdf4acb4fdac75829be4dd01cb5} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}{Custom\+Vector}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Usuwa zaalokowaną pamięć. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classmyds_1_1_custom_vector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmyds_1_1_custom_vector_afc1bacda5f5b4b230142b275ea087b32}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!at@{at}}
+\index{at@{at}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_afc1bacda5f5b4b230142b275ea087b32} 
+template$<$typename T$>$ \\
+const T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca stałą wartość elementu wektora pod indeksem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Unikalny indeks elementu wektora. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element odpowiadający indeksowi. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_a7df3f5b6a50887eda8228ce81d9cd3d7}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a7df3f5b6a50887eda8228ce81d9cd3d7} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+begin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy iterator do pierwszego elementu wektora. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator} do pierwszego elementu wektora. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_ab7e4f043cf7cdee1466ad5124c1dc21b}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_ab7e4f043cf7cdee1466ad5124c1dc21b} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwalania aktualnie zajmowaną pamięć i przywraca wektora do stanu domyślnego. 
+
+\Hypertarget{classmyds_1_1_custom_vector_ab537ed8930c324eb0671c82eac798a80}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_ab537ed8930c324eb0671c82eac798a80} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sprawdza czy wektor jest pusty. 
+
+\begin{DoxyReturn}{Returns}
+Prawda/\+\+Fałsz. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_a1752a6192c837d878923af13431e9553}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!end@{end}}
+\index{end@{end}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a1752a6192c837d878923af13431e9553} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+end (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy iterator do końca wektora. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator} do pierwszego elementu wektora. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_ab3942ce83d6bf5f3ae9ea84102a5a4df}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_ab3942ce83d6bf5f3ae9ea84102a5a4df} 
+template$<$typename T$>$ \\
+const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}{Custom\+Vector}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_aeade3fe5fccf8a28bd94aed0beea0c1a}{Custom\+Vector}}$<$ T $>$ \&}]{other\+\_\+vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy głęboką kopię, czyli przepisuje wszystkie elementy innego wektora. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+vec} & Inny wektor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do wektora. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_a22c7212f1249faa93085509d977ca6d0}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a22c7212f1249faa93085509d977ca6d0} 
+template$<$typename T$>$ \\
+T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator, który zwraca referencję do elementu wektora pod indeksem. Używany jest do zmiany wartości elementu pod konkretnym indeksem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Unikalny indeks elementu wektora. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element odpowiadający indeksowi. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_ad1d07672154684115d942fc5681c1681}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_ad1d07672154684115d942fc5681c1681} 
+template$<$typename T$>$ \\
+const T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator, który zwraca stałą wartość elementu wektora pod indeksem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Unikalny indeks elementu wektora. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element odpowiadający indeksowi. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_a62e1038822a2e7ac9b32823acad1ac59}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!pushBack@{pushBack}}
+\index{pushBack@{pushBack}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushBack()}{pushBack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a62e1038822a2e7ac9b32823acad1ac59} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+push\+Back (\begin{DoxyParamCaption}\item[{const T \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Wartość nowo dodanego elementu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_custom_vector_adbdd13f1854bb1f0e5a4047107cf8f86}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!pushBack@{pushBack}}
+\index{pushBack@{pushBack}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushBack()}{pushBack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_adbdd13f1854bb1f0e5a4047107cf8f86} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+push\+Back (\begin{DoxyParamCaption}\item[{T \&\&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Wartość nowo dodanego elementu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_custom_vector_a507b0a70726c7c49b0173eb919b7ec95}\index{myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}!size@{size}}
+\index{size@{size}!myds::CustomVector$<$ T $>$@{myds::CustomVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_a507b0a70726c7c49b0173eb919b7ec95} 
+template$<$typename T$>$ \\
+size\+\_\+t \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca liczbę zapełnionych elementów kontenera. 
+
+\begin{DoxyReturn}{Returns}
+Liczba zapełnionych elementów kontenera. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{ds_8hpp}{ds.\+hpp}}\end{DoxyCompactItemize}

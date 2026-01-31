@@ -1,0 +1,181 @@
+\doxysection{myds::\+Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmyds_1_1_linked_list}{}\label{classmyds_1_1_linked_list}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+
+
+Własna implementacja listy jednokierunkowej. To kontener LIFO (Last in first out).  
+
+
+
+
+{\ttfamily \+\#include $<$ds.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em Własna implementacja iteratora do struktury \doxylink{classmyds_1_1_linked_list}{Linked\+List}. Służy nam do łatwego dostępu do danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_a3b3c267615247d145bb7ea17f2babf3f}{Linked\+List}} ()
+\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_addd35e4fc18b445953f5a2ca9ea54697}{Linked\+List}} (const Linked\+List \&other\+\_\+list)=delete
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący, zablokowany. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_aec9618b48dd71b081764927712864227}{Linked\+List}} (const Linked\+List \&\&other\+\_\+list)=delete
+\begin{DoxyCompactList}\small\item\em Konstruktor przenoszący, zablokowany. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmyds_1_1_linked_list_a234bfe6b6f71189e74d89dc425b01d39}{add}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Dodaje nowy element na samą górę listy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmyds_1_1_linked_list_a1c054e0dcd57c7fcc69a983c58c32e6e}{add}} (T \&\&value)
+\begin{DoxyCompactList}\small\item\em Przenosi nową wartość i dodaje węzeł na górę listy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmyds_1_1_linked_list_a3021ae4f87c827af3eda1b0f4f061836}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Usuwa pierwszy element listy. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classmyds_1_1_linked_list_ab3c3c12151136406aad5e5d6b2bf65f1}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza czy lista jest pusta. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_linked_list_a78c557fec0e51190a41b7628eb7f6597}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Tworzy iterator będący na pierwszym elemencie. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_linked_list_ab1858cd0cc8a5051619022e1517787ca}{end}} () const
+\begin{DoxyCompactList}\small\item\em Tworzy iterator będący na końcu kontenera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class myds::\+\+Linked\+List$<$ T $>$}
+Własna implementacja listy jednokierunkowej. To kontener LIFO (Last in first out). 
+
+\label{doc-constructors}
+\Hypertarget{classmyds_1_1_linked_list_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmyds_1_1_linked_list_a3b3c267615247d145bb7ea17f2babf3f}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_a3b3c267615247d145bb7ea17f2babf3f} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Linked\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmyds_1_1_linked_list_addd35e4fc18b445953f5a2ca9ea54697}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_addd35e4fc18b445953f5a2ca9ea54697} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Linked\+List (\begin{DoxyParamCaption}\item[{const Linked\+List$<$ T $>$ \&}]{other\+\_\+list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Konstruktor kopiujący, zablokowany. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+list} & Inna lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_linked_list_aec9618b48dd71b081764927712864227}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_aec9618b48dd71b081764927712864227} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+\+Linked\+List (\begin{DoxyParamCaption}\item[{const Linked\+List$<$ T $>$ \&\&}]{other\+\_\+list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Konstruktor przenoszący, zablokowany. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+list} & Inna lista. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classmyds_1_1_linked_list_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmyds_1_1_linked_list_a234bfe6b6f71189e74d89dc425b01d39}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!add@{add}}
+\index{add@{add}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_a234bfe6b6f71189e74d89dc425b01d39} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+add (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dodaje nowy element na samą górę listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość nowego węzła. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_linked_list_a1c054e0dcd57c7fcc69a983c58c32e6e}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!add@{add}}
+\index{add@{add}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_a1c054e0dcd57c7fcc69a983c58c32e6e} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+add (\begin{DoxyParamCaption}\item[{T \&\&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przenosi nową wartość i dodaje węzeł na górę listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość nowego węzła. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmyds_1_1_linked_list_a78c557fec0e51190a41b7628eb7f6597}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_a78c557fec0e51190a41b7628eb7f6597} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+begin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy iterator będący na pierwszym elemencie. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_linked_list_1_1_iterator}{Iterator} na pierwszym elemencie. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_ab3c3c12151136406aad5e5d6b2bf65f1}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_ab3c3c12151136406aad5e5d6b2bf65f1} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sprawdza czy lista jest pusta. 
+
+\begin{DoxyReturn}{Returns}
+Prawda/\+\+Fałsz. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_ab1858cd0cc8a5051619022e1517787ca}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!end@{end}}
+\index{end@{end}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_ab1858cd0cc8a5051619022e1517787ca} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_linked_list_1_1_iterator}{Iterator}} \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+end (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy iterator będący na końcu kontenera. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_linked_list_1_1_iterator}{Iterator} na końcu kontenera. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_linked_list_a3021ae4f87c827af3eda1b0f4f061836}\index{myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!myds::LinkedList$<$ T $>$@{myds::LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_linked_list_a3021ae4f87c827af3eda1b0f4f061836} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::\+\+Linked\+List}}$<$ T $>$::\+pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Usuwa pierwszy element listy. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{ds_8hpp}{ds.\+hpp}}\end{DoxyCompactItemize}

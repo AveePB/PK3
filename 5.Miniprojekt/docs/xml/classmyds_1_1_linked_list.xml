@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="classmyds_1_1_linked_list" kind="class" language="C++" prot="public">
+    <compoundname>myds::LinkedList</compoundname>
+    <includes refid="ds_8hpp" local="no">ds.hpp</includes>
+    <innerclass refid="classmyds_1_1_linked_list_1_1_node" prot="private">myds::LinkedList::Node</innerclass>
+    <innerclass refid="classmyds_1_1_linked_list_1_1_iterator" prot="public">myds::LinkedList::Iterator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmyds_1_1_linked_list_1ab40ae9a1cf16122a38e8aec830a761d5" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Node &gt;</type>
+        <definition>std::unique_ptr&lt;Node&gt; myds::LinkedList&lt; T &gt;::head</definition>
+        <argsstring></argsstring>
+        <name>head</name>
+        <qualifiedname>myds::LinkedList::head</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="312" column="17" bodyfile="src/ds.hpp" bodystart="312" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myds::LinkedList&lt; T &gt;::LinkedList</definition>
+        <argsstring>()</argsstring>
+        <name>LinkedList</name>
+        <qualifiedname>myds::LinkedList::LinkedList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="318" column="1" bodyfile="src/ds.hpp" bodystart="318" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1addd35e4fc18b445953f5a2ca9ea54697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>myds::LinkedList&lt; T &gt;::LinkedList</definition>
+        <argsstring>(const LinkedList &amp;other_list)=delete</argsstring>
+        <name>LinkedList</name>
+        <qualifiedname>myds::LinkedList::LinkedList</qualifiedname>
+        <param>
+          <type>const LinkedList &amp;</type>
+          <declname>other_list</declname>
+        </param>
+        <briefdescription>
+<para>Konstruktor kopiujący, zablokowany. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inna lista. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="324" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1aec9618b48dd71b081764927712864227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>myds::LinkedList&lt; T &gt;::LinkedList</definition>
+        <argsstring>(const LinkedList &amp;&amp;other_list)=delete</argsstring>
+        <name>LinkedList</name>
+        <qualifiedname>myds::LinkedList::LinkedList</qualifiedname>
+        <param>
+          <type>const LinkedList &amp;&amp;</type>
+          <declname>other_list</declname>
+        </param>
+        <briefdescription>
+<para>Konstruktor przenoszący, zablokowany. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inna lista. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="330" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1a234bfe6b6f71189e74d89dc425b01d39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myds::LinkedList&lt; T &gt;::add</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>add</name>
+        <qualifiedname>myds::LinkedList::add</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Dodaje nowy element na samą górę listy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wartość nowego węzła. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="336" column="6" bodyfile="src/ds.hpp" bodystart="336" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1a1c054e0dcd57c7fcc69a983c58c32e6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myds::LinkedList&lt; T &gt;::add</definition>
+        <argsstring>(T &amp;&amp;value)</argsstring>
+        <name>add</name>
+        <qualifiedname>myds::LinkedList::add</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Przenosi nową wartość i dodaje węzeł na górę listy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wartość nowego węzła. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="346" column="6" bodyfile="src/ds.hpp" bodystart="346" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1a3021ae4f87c827af3eda1b0f4f061836" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myds::LinkedList&lt; T &gt;::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <qualifiedname>myds::LinkedList::pop</qualifiedname>
+        <briefdescription>
+<para>Usuwa pierwszy element listy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="355" column="6" bodyfile="src/ds.hpp" bodystart="355" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1ab3c3c12151136406aad5e5d6b2bf65f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myds::LinkedList&lt; T &gt;::empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <qualifiedname>myds::LinkedList::empty</qualifiedname>
+        <briefdescription>
+<para>Sprawdza czy lista jest pusta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Prawda/Fałsz. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="365" column="6" bodyfile="src/ds.hpp" bodystart="365" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1a78c557fec0e51190a41b7628eb7f6597" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator myds::LinkedList&lt; T &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>myds::LinkedList::begin</qualifiedname>
+        <briefdescription>
+<para>Tworzy iterator będący na pierwszym elemencie. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref> na pierwszym elemencie. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="438" column="10" bodyfile="src/ds.hpp" bodystart="438" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classmyds_1_1_linked_list_1ab1858cd0cc8a5051619022e1517787ca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator myds::LinkedList&lt; T &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>myds::LinkedList::end</qualifiedname>
+        <briefdescription>
+<para>Tworzy iterator będący na końcu kontenera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmyds_1_1_linked_list_1_1_iterator" kindref="compound">Iterator</ref> na końcu kontenera. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ds.hpp" line="444" column="10" bodyfile="src/ds.hpp" bodystart="444" bodyend="444"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Własna implementacja listy jednokierunkowej. To kontener LIFO (Last in first out). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/ds.hpp" line="270" column="1" bodyfile="src/ds.hpp" bodystart="270" bodyend="445"/>
+    <listofallmembers>
+      <member refid="classmyds_1_1_linked_list_1a234bfe6b6f71189e74d89dc425b01d39" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>add</name></member>
+      <member refid="classmyds_1_1_linked_list_1a1c054e0dcd57c7fcc69a983c58c32e6e" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>add</name></member>
+      <member refid="classmyds_1_1_linked_list_1a78c557fec0e51190a41b7628eb7f6597" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>begin</name></member>
+      <member refid="classmyds_1_1_linked_list_1ab3c3c12151136406aad5e5d6b2bf65f1" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>empty</name></member>
+      <member refid="classmyds_1_1_linked_list_1ab1858cd0cc8a5051619022e1517787ca" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>end</name></member>
+      <member refid="classmyds_1_1_linked_list_1ab40ae9a1cf16122a38e8aec830a761d5" prot="private" virt="non-virtual"><scope>myds::LinkedList</scope><name>head</name></member>
+      <member refid="classmyds_1_1_linked_list_1a3b3c267615247d145bb7ea17f2babf3f" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>LinkedList</name></member>
+      <member refid="classmyds_1_1_linked_list_1addd35e4fc18b445953f5a2ca9ea54697" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>LinkedList</name></member>
+      <member refid="classmyds_1_1_linked_list_1aec9618b48dd71b081764927712864227" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>LinkedList</name></member>
+      <member refid="classmyds_1_1_linked_list_1a3021ae4f87c827af3eda1b0f4f061836" prot="public" virt="non-virtual"><scope>myds::LinkedList</scope><name>pop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

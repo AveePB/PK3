@@ -1,0 +1,147 @@
+\doxysection{mylog::\+Sensor\+Logger Class Reference}
+\hypertarget{classmylog_1_1_sensor_logger}{}\label{classmylog_1_1_sensor_logger}\index{mylog::SensorLogger@{mylog::SensorLogger}}
+
+
+Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log.  
+
+
+
+
+{\ttfamily \+\#include $<$log.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_a9dc46f12e24414a262901095448783e9}{load\+From\+File}} ()
+\begin{DoxyCompactList}\small\item\em Wczytaj logi z pliku teskstowego. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_aa3482d7c2ba9cc6ed9d31b201f4d9299}{save\+To\+File}} ()
+\begin{DoxyCompactList}\small\item\em Zapisuje logi do pliku teskstowego. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_ac19cf1040b71784f4791f16e93fdf7f7}{create\+Log}} (const int \&sensor\+\_\+id, const std::\+string \&msg, const double \&read\+\_\+value, const \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{Log\+Type}} \&log\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Tworzy nowego loga i dodaje go do listy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_a8056e5fa2cee98fe36ece54f0bbff502}{create\+Log}} (\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} \&log)
+\begin{DoxyCompactList}\small\item\em Tworzy nowego loga i dodaje go do listy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_a250989418c3697e91ce592c556202234}{create\+Log}} (\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} \&\&log)
+\begin{DoxyCompactList}\small\item\em Tworzy nowego loga i dodaje go do listy. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ \doxymbox{\hyperlink{structmylog_1_1_log_entry}{Log\+Entry}} $>$ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_a49aa37e2ac70a523d489502d0de65cb4}{filter}} (const std::\+function$<$ bool(\doxymbox{\hyperlink{structmylog_1_1_log_entry}{Log\+Entry}} \&)$>$ \&predicate) const
+\begin{DoxyCompactList}\small\item\em Zwraca elementy spełniające podany predykat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Sensor\+Logger \& \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_af24a8ff4386263b1940902cfc82f6cdd}{get\+Singleton}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca/\+inicjalizuje loggera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log. 
+
+\label{doc-func-members}
+\Hypertarget{classmylog_1_1_sensor_logger_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmylog_1_1_sensor_logger_ac19cf1040b71784f4791f16e93fdf7f7}\index{mylog::SensorLogger@{mylog::SensorLogger}!createLog@{createLog}}
+\index{createLog@{createLog}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{createLog()}{createLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_ac19cf1040b71784f4791f16e93fdf7f7} 
+void mylog::\+\+Sensor\+Logger::\+create\+Log (\begin{DoxyParamCaption}\item[{const int \&}]{sensor\+\_\+id}{, }\item[{const std::\+string \&}]{msg}{, }\item[{const double \&}]{read\+\_\+value}{, }\item[{const \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{Log\+Type}} \&}]{log\+\_\+type}{}\end{DoxyParamCaption})}
+
+
+
+Tworzy nowego loga i dodaje go do listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+id} & Identyfikator czujnika. \\
+\hline
+{\em msg} & Dodatkowa wiadomość. \\
+\hline
+{\em read\+\_\+value} & Odczytana wartość z czujnika. \\
+\hline
+{\em log\+\_\+type} & Typ wiadomości. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmylog_1_1_sensor_logger_a250989418c3697e91ce592c556202234}\index{mylog::SensorLogger@{mylog::SensorLogger}!createLog@{createLog}}
+\index{createLog@{createLog}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{createLog()}{createLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_a250989418c3697e91ce592c556202234} 
+void mylog::\+\+Sensor\+Logger::\+create\+Log (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} \&\&}]{log}{}\end{DoxyParamCaption})}
+
+
+
+Tworzy nowego loga i dodaje go do listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & Dane związane z logiem. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmylog_1_1_sensor_logger_a8056e5fa2cee98fe36ece54f0bbff502}\index{mylog::SensorLogger@{mylog::SensorLogger}!createLog@{createLog}}
+\index{createLog@{createLog}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{createLog()}{createLog()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_a8056e5fa2cee98fe36ece54f0bbff502} 
+void mylog::\+\+Sensor\+Logger::\+create\+Log (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} \&}]{log}{}\end{DoxyParamCaption})}
+
+
+
+Tworzy nowego loga i dodaje go do listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & Dane związane z logiem. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmylog_1_1_sensor_logger_a49aa37e2ac70a523d489502d0de65cb4}\index{mylog::SensorLogger@{mylog::SensorLogger}!filter@{filter}}
+\index{filter@{filter}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_a49aa37e2ac70a523d489502d0de65cb4} 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ \doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}} $>$ mylog::\+\+Sensor\+Logger::\+filter (\begin{DoxyParamCaption}\item[{const std::\+function$<$ bool(\doxymbox{\hyperlink{structmylog_1_1_log_entry}{Log\+Entry}} \&)$>$ \&}]{predicate}{}\end{DoxyParamCaption}) const}
+
+
+
+Zwraca elementy spełniające podany predykat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & Predykat. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor elementów będących częścią listy. 
+\end{DoxyReturn}
+\Hypertarget{classmylog_1_1_sensor_logger_af24a8ff4386263b1940902cfc82f6cdd}\index{mylog::SensorLogger@{mylog::SensorLogger}!getSingleton@{getSingleton}}
+\index{getSingleton@{getSingleton}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{getSingleton()}{getSingleton()}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_af24a8ff4386263b1940902cfc82f6cdd} 
+\doxymbox{\hyperlink{classmylog_1_1_sensor_logger}{mylog::\+\+Sensor\+Logger}} \& mylog::\+\+Sensor\+Logger::\+get\+Singleton (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zwraca/\+inicjalizuje loggera. 
+
+\begin{DoxyReturn}{Returns}
+Instancja loggera. 
+\end{DoxyReturn}
+\Hypertarget{classmylog_1_1_sensor_logger_a9dc46f12e24414a262901095448783e9}\index{mylog::SensorLogger@{mylog::SensorLogger}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_a9dc46f12e24414a262901095448783e9} 
+void mylog::\+\+Sensor\+Logger::\+load\+From\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wczytaj logi z pliku teskstowego. 
+
+\Hypertarget{classmylog_1_1_sensor_logger_aa3482d7c2ba9cc6ed9d31b201f4d9299}\index{mylog::SensorLogger@{mylog::SensorLogger}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!mylog::SensorLogger@{mylog::SensorLogger}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily \label{classmylog_1_1_sensor_logger_aa3482d7c2ba9cc6ed9d31b201f4d9299} 
+void mylog::\+\+Sensor\+Logger::\+save\+To\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje logi do pliku teskstowego. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{log_8hpp}{log.\+hpp}}\item 
+src/\+\doxymbox{\hyperlink{log_8cpp}{log.\+cpp}}\end{DoxyCompactItemize}

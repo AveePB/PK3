@@ -1,0 +1,26 @@
+\doxysection{src/\+log.hpp File Reference}
+\hypertarget{log_8hpp}{}\label{log_8hpp}\index{src/log.hpp@{src/log.hpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$functional$>$}\newline
+{\ttfamily \+\#include "{}ds.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::\+\+Log\+Entry}}
+\begin{DoxyCompactList}\small\item\em Zbiór informacji dotyczących loga. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{classmylog_1_1_sensor_logger}{mylog::\+\+Sensor\+Logger}}
+\begin{DoxyCompactList}\small\item\em Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacemylog}{mylog}}
+\begin{DoxyCompactList}\small\item\em Przestrzeń nazw przechowywująca loggera będącego singletonem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{mylog::\+\+Log\+Type}} \{ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69a8ce81acf0dfbba71ad421525a04b345d}{mylog::\+info}} = 1
+, \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69a6f83a2fe78017613c275982f9982ed57}{mylog::\+debug}} = 2
+, \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69a3aee7f26ad0c90d83fd3a5f29c17d5cf}{mylog::\+warning}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Przechowuje informacje jaki to jest typ wiadomości info-\/informacja, debug-\/debugowanie, warning-\/ostrzeżenie. \end{DoxyCompactList}\end{DoxyCompactItemize}

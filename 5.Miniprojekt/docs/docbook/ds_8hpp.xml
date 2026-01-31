@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ds_8hpp" xml:lang="en-US">
+<title>src/ds.hpp File Reference</title>
+<indexterm><primary>src/ds.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?>#include &lt;memory&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector&lt; T &gt;</link></para>
+
+<para>Własna implementacja wektora z biblioteki STL. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classmyds_1_1_custom_vector_1_1_iterator">myds::CustomVector&lt; T &gt;::Iterator</link></para>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_custom_vector">CustomVector</link>. Służy nam do łatwego dostępu do danych. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classmyds_1_1_linked_list">myds::LinkedList&lt; T &gt;</link></para>
+
+<para>Własna implementacja listy jednokierunkowej. To kontener LIFO (Last in first out). </para>
+</listitem>
+            <listitem><para>class <link linkend="_classmyds_1_1_linked_list_1_1_iterator">myds::LinkedList&lt; T &gt;::Iterator</link></para>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_linked_list">LinkedList</link>. Służy nam do łatwego dostępu do danych. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacemyds">myds</link></para>
+
+<para>Przestrzeń nazw przechowywująca własnoręcznie napisane kontenery. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

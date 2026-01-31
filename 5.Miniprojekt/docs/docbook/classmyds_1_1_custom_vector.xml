@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmyds_1_1_custom_vector" xml:lang="en-US">
+<title>myds::CustomVector&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>Własna implementacja wektora z biblioteki STL. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ds.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link></para>
+
+<para>Własna implementacja iteratora do struktury <link linkend="_classmyds_1_1_custom_vector">CustomVector</link>. Służy nam do łatwego dostępu do danych. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link> ()</para>
+
+<para>Inicjalizuje kontener bez żadnych elementów domyślnie. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1ac8eacabb336c6abf0db376aec312e776">CustomVector</link> (size_t n)</para>
+
+<para>Inicjalizuje tablicę kontenera na co najmniej n elementów. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1a6d0f7cf930201dd64eba6ebbd4204475">CustomVector</link> (const CustomVector&lt; T &gt; &amp;other_vec)</para>
+
+<para>Konsturktor kopiujący tworzący głęboką kopię. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1a8b6e3b90297b0d9c8ca71346487711c7">CustomVector</link> (CustomVector&lt; T &gt; &amp;&amp;other_vec)</para>
+
+<para>Konstruktor przenoszący, przenosi dane z innego obiektu i go przywaraca do postaci domyślnej. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1a9d93bbdf4acb4fdac75829be4dd01cb5">~CustomVector</link> ()</para>
+
+<para>Usuwa zaalokowaną pamięć. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classmyds_1_1_custom_vector_1a507b0a70726c7c49b0173eb919b7ec95">size</link> () const</para>
+
+<para>Zwraca liczbę zapełnionych elementów kontenera. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classmyds_1_1_custom_vector_1a62e1038822a2e7ac9b32823acad1ac59">pushBack</link> (const T &amp;val)</para>
+
+<para>Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classmyds_1_1_custom_vector_1adbdd13f1854bb1f0e5a4047107cf8f86">pushBack</link> (T &amp;&amp;val)</para>
+
+<para>Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classmyds_1_1_custom_vector_1ab7e4f043cf7cdee1466ad5124c1dc21b">clear</link> ()</para>
+
+<para>Zwalania aktualnie zajmowaną pamięć i przywraca wektora do stanu domyślnego. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmyds_1_1_custom_vector_1ab537ed8930c324eb0671c82eac798a80">empty</link> () const</para>
+
+<para>Sprawdza czy wektor jest pusty. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_classmyds_1_1_custom_vector_1afc1bacda5f5b4b230142b275ea087b32">at</link> (size_t idx) const</para>
+
+<para>Zwraca stałą wartość elementu wektora pod indeksem. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_classmyds_1_1_custom_vector_1ad1d07672154684115d942fc5681c1681">operator[]</link> (size_t idx) const</para>
+
+<para>Nadpisany operator, który zwraca stałą wartość elementu wektora pod indeksem. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_classmyds_1_1_custom_vector_1a22c7212f1249faa93085509d977ca6d0">operator[]</link> (size_t idx)</para>
+
+<para>Nadpisany operator, który zwraca referencję do elementu wektora pod indeksem. Używany jest do zmiany wartości elementu pod konkretnym indeksem. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link> &amp; <link linkend="_classmyds_1_1_custom_vector_1ab3942ce83d6bf5f3ae9ea84102a5a4df">operator=</link> (const <link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link>&lt; T &gt; &amp;other_vec)</para>
+
+<para>Tworzy głęboką kopię, czyli przepisuje wszystkie elementy innego wektora. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> <link linkend="_classmyds_1_1_custom_vector_1a7df3f5b6a50887eda8228ce81d9cd3d7">begin</link> () const</para>
+
+<para>Tworzy iterator do pierwszego elementu wektora. </para>
+</listitem>
+            <listitem><para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> <link linkend="_classmyds_1_1_custom_vector_1a1752a6192c837d878923af13431e9553">end</link> () const</para>
+
+<para>Tworzy iterator do końca wektora. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class myds::CustomVector&lt; T &gt;</title></simplesect>
+
+<para>Własna implementacja wektora z biblioteki STL. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a"/><section>
+    <title>CustomVector()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>CustomVector</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>CustomVector</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::CustomVector ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inicjalizuje kontener bez żadnych elementów domyślnie. </para>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1ac8eacabb336c6abf0db376aec312e776"/><section>
+    <title>CustomVector()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>CustomVector</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>CustomVector</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::CustomVector (size_t n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inicjalizuje tablicę kontenera na co najmniej n elementów. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>Liczba elementów we wektorze. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a6d0f7cf930201dd64eba6ebbd4204475"/><section>
+    <title>CustomVector()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>CustomVector</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>CustomVector</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::CustomVector (const CustomVector&lt; T &gt; &amp; other_vec)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Konsturktor kopiujący tworzący głęboką kopię. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_vec</entry><entry>
+<para>Inny wektor na bazie którego tworzymy głęboką kopię. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a8b6e3b90297b0d9c8ca71346487711c7"/><section>
+    <title>CustomVector()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>CustomVector</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>CustomVector</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::CustomVector (CustomVector&lt; T &gt; &amp;&amp; other_vec)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Konstruktor przenoszący, przenosi dane z innego obiektu i go przywaraca do postaci domyślnej. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_vec</entry><entry>
+<para>Inny wektor. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a9d93bbdf4acb4fdac75829be4dd01cb5"/><section>
+    <title>~CustomVector()</title>
+<indexterm><primary>~CustomVector</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>~CustomVector</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::~<link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Usuwa zaalokowaną pamięć. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmyds_1_1_custom_vector_1afc1bacda5f5b4b230142b275ea087b32"/><section>
+    <title>at()</title>
+<indexterm><primary>at</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>at</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::at (size_t idx) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Zwraca stałą wartość elementu wektora pod indeksem. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>Unikalny indeks elementu wektora. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Element odpowiadający indeksowi. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a7df3f5b6a50887eda8228ce81d9cd3d7"/><section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>begin</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::begin ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Tworzy iterator do pierwszego elementu wektora. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> do pierwszego elementu wektora. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1ab7e4f043cf7cdee1466ad5124c1dc21b"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>clear</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Zwalania aktualnie zajmowaną pamięć i przywraca wektora do stanu domyślnego. </para>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1ab537ed8930c324eb0671c82eac798a80"/><section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>empty</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::empty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sprawdza czy wektor jest pusty. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Prawda/Fałsz. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a1752a6192c837d878923af13431e9553"/><section>
+    <title>end()</title>
+<indexterm><primary>end</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>end</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::end ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Tworzy iterator do końca wektora. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classmyds_1_1_custom_vector_1_1_iterator">Iterator</link> do pierwszego elementu wektora. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1ab3942ce83d6bf5f3ae9ea84102a5a4df"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>const <link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link> &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::operator= (const <link linkend="_classmyds_1_1_custom_vector_1aeade3fe5fccf8a28bd94aed0beea0c1a">CustomVector</link>&lt; T &gt; &amp; other_vec)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Tworzy głęboką kopię, czyli przepisuje wszystkie elementy innego wektora. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other_vec</entry><entry>
+<para>Inny wektor. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Referencja do wektora. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a22c7212f1249faa93085509d977ca6d0"/><section>
+    <title>operator[]()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::operator[] (size_t idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator, który zwraca referencję do elementu wektora pod indeksem. Używany jest do zmiany wartości elementu pod konkretnym indeksem. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>Unikalny indeks elementu wektora. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Element odpowiadający indeksowi. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1ad1d07672154684115d942fc5681c1681"/><section>
+    <title>operator[]()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::operator[] (size_t idx) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Nadpisany operator, który zwraca stałą wartość elementu wektora pod indeksem. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>Unikalny indeks elementu wektora. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Element odpowiadający indeksowi. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a62e1038822a2e7ac9b32823acad1ac59"/><section>
+    <title>pushBack()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>pushBack</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>pushBack</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::pushBack (const T &amp; val)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>val</entry><entry>
+<para>Wartość nowo dodanego elementu. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1adbdd13f1854bb1f0e5a4047107cf8f86"/><section>
+    <title>pushBack()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>pushBack</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>pushBack</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::pushBack (T &amp;&amp; val)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>val</entry><entry>
+<para>Wartość nowo dodanego elementu. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmyds_1_1_custom_vector_1a507b0a70726c7c49b0173eb919b7ec95"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>myds::CustomVector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>myds::CustomVector&lt; T &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmyds_1_1_custom_vector">myds::CustomVector</link>&lt; T &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Zwraca liczbę zapełnionych elementów kontenera. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Liczba zapełnionych elementów kontenera. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_ds_8hpp">ds.hpp</link></section>
+</section>

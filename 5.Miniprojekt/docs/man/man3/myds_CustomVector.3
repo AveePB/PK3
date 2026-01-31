@@ -1,0 +1,276 @@
+.TH "myds::CustomVector< T >" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+myds::CustomVector< T > \- Własna implementacja wektora z biblioteki STL\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ds\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIterator\fP"
+.br
+.RI "Własna implementacja iteratora do struktury \fBCustomVector\fP\&. Służy nam do łatwego dostępu do danych\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomVector\fP ()"
+.br
+.RI "Inicjalizuje kontener bez żadnych elementów domyślnie\&. "
+.ti -1c
+.RI "\fBCustomVector\fP (size_t n)"
+.br
+.RI "Inicjalizuje tablicę kontenera na co najmniej n elementów\&. "
+.ti -1c
+.RI "\fBCustomVector\fP (const CustomVector< T > &other_vec)"
+.br
+.RI "Konsturktor kopiujący tworzący głęboką kopię\&. "
+.ti -1c
+.RI "\fBCustomVector\fP (CustomVector< T > &&other_vec)"
+.br
+.RI "Konstruktor przenoszący, przenosi dane z innego obiektu i go przywaraca do postaci domyślnej\&. "
+.ti -1c
+.RI "\fB~CustomVector\fP ()"
+.br
+.RI "Usuwa zaalokowaną pamięć\&. "
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.RI "Zwraca liczbę zapełnionych elementów kontenera\&. "
+.ti -1c
+.RI "void \fBpushBack\fP (const T &val)"
+.br
+.RI "Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów\&. "
+.ti -1c
+.RI "void \fBpushBack\fP (T &&val)"
+.br
+.RI "Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Zwalania aktualnie zajmowaną pamięć i przywraca wektora do stanu domyślnego\&. "
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.RI "Sprawdza czy wektor jest pusty\&. "
+.ti -1c
+.RI "const T & \fBat\fP (size_t idx) const"
+.br
+.RI "Zwraca stałą wartość elementu wektora pod indeksem\&. "
+.ti -1c
+.RI "const T & \fBoperator[]\fP (size_t idx) const"
+.br
+.RI "Nadpisany operator, który zwraca stałą wartość elementu wektora pod indeksem\&. "
+.ti -1c
+.RI "T & \fBoperator[]\fP (size_t idx)"
+.br
+.RI "Nadpisany operator, który zwraca referencję do elementu wektora pod indeksem\&. Używany jest do zmiany wartości elementu pod konkretnym indeksem\&. "
+.ti -1c
+.RI "const \fBCustomVector\fP & \fBoperator=\fP (const \fBCustomVector\fP< T > &other_vec)"
+.br
+.RI "Tworzy głęboką kopię, czyli przepisuje wszystkie elementy innego wektora\&. "
+.ti -1c
+.RI "\fBIterator\fP \fBbegin\fP () const"
+.br
+.RI "Tworzy iterator do pierwszego elementu wektora\&. "
+.ti -1c
+.RI "\fBIterator\fP \fBend\fP () const"
+.br
+.RI "Tworzy iterator do końca wektora\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class myds::CustomVector< T >"Własna implementacja wektora z biblioteki STL\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::CustomVector ()\fR [inline]\fP"
+
+.PP
+Inicjalizuje kontener bez żadnych elementów domyślnie\&. 
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::CustomVector (size_t n)\fR [inline]\fP"
+
+.PP
+Inicjalizuje tablicę kontenera na co najmniej n elementów\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Liczba elementów we wektorze\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::CustomVector (const CustomVector< T > & other_vec)\fR [inline]\fP"
+
+.PP
+Konsturktor kopiujący tworzący głęboką kopię\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_vec\fP Inny wektor na bazie którego tworzymy głęboką kopię\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::CustomVector (CustomVector< T > && other_vec)\fR [inline]\fP"
+
+.PP
+Konstruktor przenoszący, przenosi dane z innego obiektu i go przywaraca do postaci domyślnej\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_vec\fP Inny wektor\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBmyds::CustomVector\fP< T >::~\fBCustomVector\fP ()\fR [inline]\fP"
+
+.PP
+Usuwa zaalokowaną pamięć\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T> const T & \fBmyds::CustomVector\fP< T >::at (size_t idx) const\fR [inline]\fP"
+
+.PP
+Zwraca stałą wartość elementu wektora pod indeksem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidx\fP Unikalny indeks elementu wektora\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Element odpowiadający indeksowi\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP \fBmyds::CustomVector\fP< T >::begin () const\fR [inline]\fP"
+
+.PP
+Tworzy iterator do pierwszego elementu wektora\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do pierwszego elementu wektora\&. 
+.RE
+.PP
+
+.SS "template<typename T> void \fBmyds::CustomVector\fP< T >::clear ()\fR [inline]\fP"
+
+.PP
+Zwalania aktualnie zajmowaną pamięć i przywraca wektora do stanu domyślnego\&. 
+.SS "template<typename T> bool \fBmyds::CustomVector\fP< T >::empty () const\fR [inline]\fP"
+
+.PP
+Sprawdza czy wektor jest pusty\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Prawda/Fałsz\&. 
+.RE
+.PP
+
+.SS "template<typename T> \fBIterator\fP \fBmyds::CustomVector\fP< T >::end () const\fR [inline]\fP"
+
+.PP
+Tworzy iterator do końca wektora\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBIterator\fP do pierwszego elementu wektora\&. 
+.RE
+.PP
+
+.SS "template<typename T> const \fBCustomVector\fP & \fBmyds::CustomVector\fP< T >::operator= (const \fBCustomVector\fP< T > & other_vec)\fR [inline]\fP"
+
+.PP
+Tworzy głęboką kopię, czyli przepisuje wszystkie elementy innego wektora\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_vec\fP Inny wektor\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Referencja do wektora\&. 
+.RE
+.PP
+
+.SS "template<typename T> T & \fBmyds::CustomVector\fP< T >::operator[] (size_t idx)\fR [inline]\fP"
+
+.PP
+Nadpisany operator, który zwraca referencję do elementu wektora pod indeksem\&. Używany jest do zmiany wartości elementu pod konkretnym indeksem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidx\fP Unikalny indeks elementu wektora\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Element odpowiadający indeksowi\&. 
+.RE
+.PP
+
+.SS "template<typename T> const T & \fBmyds::CustomVector\fP< T >::operator[] (size_t idx) const\fR [inline]\fP"
+
+.PP
+Nadpisany operator, który zwraca stałą wartość elementu wektora pod indeksem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidx\fP Unikalny indeks elementu wektora\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Element odpowiadający indeksowi\&. 
+.RE
+.PP
+
+.SS "template<typename T> void \fBmyds::CustomVector\fP< T >::pushBack (const T & val)\fR [inline]\fP"
+
+.PP
+Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP Wartość nowo dodanego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> void \fBmyds::CustomVector\fP< T >::pushBack (T && val)\fR [inline]\fP"
+
+.PP
+Dodaje element do kontenera i inkrementuje liczbę zapełnionych elementów\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP Wartość nowo dodanego elementu\&. 
+.RE
+.PP
+
+.SS "template<typename T> size_t \fBmyds::CustomVector\fP< T >::size () const\fR [inline]\fP"
+
+.PP
+Zwraca liczbę zapełnionych elementów kontenera\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Liczba zapełnionych elementów kontenera\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

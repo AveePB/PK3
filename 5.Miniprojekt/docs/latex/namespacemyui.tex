@@ -1,0 +1,158 @@
+\doxysection{myui Namespace Reference}
+\hypertarget{namespacemyui}{}\label{namespacemyui}\index{myui@{myui}}
+
+
+Przestrzeń nazw przechowywująca funkcje tworzące interfejs użytkownika.  
+
+
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495}{App\+Mode}} \{ \doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170}{CREATE\+\_\+\+LOG}} = 1
+, \doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd}{READ\+\_\+\+LOGS}} = 2
+, \doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d}{SAVE\+\_\+\+LOGS\+\_\+\+TO\+\_\+\+FILE}} = 3
+, \doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6}{QUIT\+\_\+\+APP}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Przechowuje możliwe operacje, jakie może wykonać aplikacja. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944}{Read\+Mode}} \{ \doxymbox{\hyperlink{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022}{ALL\+\_\+\+LOGS}} = 1
+, \doxymbox{\hyperlink{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44}{ONLY\+\_\+\+INFO}} = 2
+, \doxymbox{\hyperlink{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060}{ONLY\+\_\+\+DEBUG}} = 3
+, \doxymbox{\hyperlink{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf}{ONLY\+\_\+\+WARN}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Przechowuje możliwe tryby wyświetlania logów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495}{App\+Mode}} \doxymbox{\hyperlink{namespacemyui_a44b76e3e17b467d90f3e43711038e0a6}{print\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Wypisuje do konsoli główne opcje i odpowiadające wybory. Oczekuje na informację zwrotną od użytkownika. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{namespacemyui_a3834204fdd8708a44e5705025b98070e}{create\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Tworzy nowego loga i dodaje go do struktury. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{namespacemyui_afcf399bf272e6a1e927cd96350d6209f}{read\+Logs}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetl przechowywane logi do konsoli. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{namespacemyui_a07b62b3e3c50f159bd3d2eeb27356b9d}{save\+Logs\+To\+File}} ()
+\begin{DoxyCompactList}\small\item\em Zapisuje informacje do pewnego pliku tekstowego z rozszerzeniem log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Przestrzeń nazw przechowywująca funkcje tworzące interfejs użytkownika. 
+
+\label{doc-enum-members}
+\Hypertarget{namespacemyui_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacemyui_abf88ef46d5552611fa142d7b022a8495}\index{myui@{myui}!AppMode@{AppMode}}
+\index{AppMode@{AppMode}!myui@{myui}}
+\doxysubsubsection{\texorpdfstring{AppMode}{AppMode}}
+{\footnotesize\ttfamily \label{namespacemyui_abf88ef46d5552611fa142d7b022a8495} 
+enum \doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495}{myui::\+\+App\+Mode}}}
+
+
+
+Przechowuje możliwe operacje, jakie może wykonać aplikacja. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CREATE\_LOG@{CREATE\_LOG}!myui@{myui}}
+\index{myui@{myui}!CREATE\_LOG@{CREATE\_LOG}}
+}\Hypertarget{namespacemyui_abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170}\label{namespacemyui_abf88ef46d5552611fa142d7b022a8495a601bc0d1b1bdfaec51b96b9139f2c170} 
+CREATE\+\_\+\+LOG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{READ\_LOGS@{READ\_LOGS}!myui@{myui}}
+\index{myui@{myui}!READ\_LOGS@{READ\_LOGS}}
+}\Hypertarget{namespacemyui_abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd}\label{namespacemyui_abf88ef46d5552611fa142d7b022a8495a76b1c9d19879f0c751a364d282b321dd} 
+READ\+\_\+\+LOGS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAVE\_LOGS\_TO\_FILE@{SAVE\_LOGS\_TO\_FILE}!myui@{myui}}
+\index{myui@{myui}!SAVE\_LOGS\_TO\_FILE@{SAVE\_LOGS\_TO\_FILE}}
+}\Hypertarget{namespacemyui_abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d}\label{namespacemyui_abf88ef46d5552611fa142d7b022a8495aea1ca86d18d94ab8ec10cc6913fd3a1d} 
+SAVE\+\_\+\+LOGS\+\_\+\+TO\+\_\+\+FILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUIT\_APP@{QUIT\_APP}!myui@{myui}}
+\index{myui@{myui}!QUIT\_APP@{QUIT\_APP}}
+}\Hypertarget{namespacemyui_abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6}\label{namespacemyui_abf88ef46d5552611fa142d7b022a8495af30f38db6d30cce305decff9299798b6} 
+QUIT\+\_\+\+APP&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944}\index{myui@{myui}!ReadMode@{ReadMode}}
+\index{ReadMode@{ReadMode}!myui@{myui}}
+\doxysubsubsection{\texorpdfstring{ReadMode}{ReadMode}}
+{\footnotesize\ttfamily \label{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944} 
+enum \doxymbox{\hyperlink{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944}{myui::\+\+Read\+Mode}}}
+
+
+
+Przechowuje możliwe tryby wyświetlania logów. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL\_LOGS@{ALL\_LOGS}!myui@{myui}}
+\index{myui@{myui}!ALL\_LOGS@{ALL\_LOGS}}
+}\Hypertarget{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022}\label{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944acf73eda1b6c2813fc873c1cc00e65022} 
+ALL\+\_\+\+LOGS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONLY\_INFO@{ONLY\_INFO}!myui@{myui}}
+\index{myui@{myui}!ONLY\_INFO@{ONLY\_INFO}}
+}\Hypertarget{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44}\label{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944a5e64abe225d0bb2e39d5303bf3a81b44} 
+ONLY\+\_\+\+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONLY\_DEBUG@{ONLY\_DEBUG}!myui@{myui}}
+\index{myui@{myui}!ONLY\_DEBUG@{ONLY\_DEBUG}}
+}\Hypertarget{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060}\label{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944ab065139a6e74b5312419006fa6758060} 
+ONLY\+\_\+\+DEBUG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONLY\_WARN@{ONLY\_WARN}!myui@{myui}}
+\index{myui@{myui}!ONLY\_WARN@{ONLY\_WARN}}
+}\Hypertarget{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf}\label{namespacemyui_aaf4c6fa2c91a8140792001c1ac429944ad5f91a5cd57d3a75b9744d392d6c95bf} 
+ONLY\+\_\+\+WARN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacemyui_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemyui_a3834204fdd8708a44e5705025b98070e}\index{myui@{myui}!createLog@{createLog}}
+\index{createLog@{createLog}!myui@{myui}}
+\doxysubsubsection{\texorpdfstring{createLog()}{createLog()}}
+{\footnotesize\ttfamily \label{namespacemyui_a3834204fdd8708a44e5705025b98070e} 
+void myui::\+create\+Log (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tworzy nowego loga i dodaje go do struktury. 
+
+\Hypertarget{namespacemyui_a44b76e3e17b467d90f3e43711038e0a6}\index{myui@{myui}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!myui@{myui}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily \label{namespacemyui_a44b76e3e17b467d90f3e43711038e0a6} 
+\doxymbox{\hyperlink{namespacemyui_abf88ef46d5552611fa142d7b022a8495}{myui::\+\+App\+Mode}} myui::\+print\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wypisuje do konsoli główne opcje i odpowiadające wybory. Oczekuje na informację zwrotną od użytkownika. 
+
+\Hypertarget{namespacemyui_afcf399bf272e6a1e927cd96350d6209f}\index{myui@{myui}!readLogs@{readLogs}}
+\index{readLogs@{readLogs}!myui@{myui}}
+\doxysubsubsection{\texorpdfstring{readLogs()}{readLogs()}}
+{\footnotesize\ttfamily \label{namespacemyui_afcf399bf272e6a1e927cd96350d6209f} 
+void myui::\+read\+Logs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetl przechowywane logi do konsoli. 
+
+\Hypertarget{namespacemyui_a07b62b3e3c50f159bd3d2eeb27356b9d}\index{myui@{myui}!saveLogsToFile@{saveLogsToFile}}
+\index{saveLogsToFile@{saveLogsToFile}!myui@{myui}}
+\doxysubsubsection{\texorpdfstring{saveLogsToFile()}{saveLogsToFile()}}
+{\footnotesize\ttfamily \label{namespacemyui_a07b62b3e3c50f159bd3d2eeb27356b9d} 
+void myui::\+save\+Logs\+To\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje informacje do pewnego pliku tekstowego z rozszerzeniem log. 
+

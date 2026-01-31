@@ -1,0 +1,48 @@
+.TH "src/log.hpp" 3 "PK3 Logger" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/log.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <iostream>\fP
+.br
+\fR#include <fstream>\fP
+.br
+\fR#include <functional>\fP
+.br
+\fR#include 'ds\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmylog::LogEntry\fP"
+.br
+.RI "Zbiór informacji dotyczących loga\&. "
+.ti -1c
+.RI "class \fBmylog::SensorLogger\fP"
+.br
+.RI "Przechowuje informacje zbierane z czujników i pozwala na ich zapis do pliku z rozszerzeniem log\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBmylog\fP"
+.br
+.RI "Przestrzeń nazw przechowywująca loggera będącego singletonem\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBmylog::LogType\fP { \fBmylog::info\fP = 1, \fBmylog::debug\fP = 2, \fBmylog::warning\fP = 3 }"
+.br
+.RI "Przechowuje informacje jaki to jest typ wiadomości info-informacja, debug-debugowanie, warning-ostrzeżenie\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PK3 Logger from the source code\&.

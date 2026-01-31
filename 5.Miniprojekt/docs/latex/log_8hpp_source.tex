@@ -1,0 +1,70 @@
+\doxysection{log.\+hpp}
+\hypertarget{log_8hpp_source}{}\label{log_8hpp_source}\index{src/log.hpp@{src/log.hpp}}
+\doxymbox{\hyperlink{log_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOG\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOG\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Biblioteki}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{ds_8hpp}{ds.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacemylog}{mylog}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{LogType}}\ \{\ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69a8ce81acf0dfbba71ad421525a04b345d}{info}}\ =\ 1,\ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69a6f83a2fe78017613c275982f9982ed57}{debug}}\ =\ 2,\ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69a3aee7f26ad0c90d83fd3a5f29c17d5cf}{warning}}\ =\ 3\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{LogEntry}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e}{sensor\_id}};\ \textcolor{comment}{//\ <\ Identyfikator\ czujnika.}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7}{msg}};\ \textcolor{comment}{//\ <\ Dodatkowa\ wiadomość.}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c}{read\_value}};\ \textcolor{comment}{//\ <\ Odczytana\ wartość\ z\ czujnika.}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a2aaee7bccdddb47ac4d457497f29f292}{date}};\textcolor{comment}{//\ <\ Data\ utworzenia\ obiektu.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{LogType}}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9}{log\_type}};\ \textcolor{comment}{//\ <\ Typ\ wiadomości.}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{LogEntry}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{LogEntry}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a4af0f096d6bbddad6b39e401a6b0f73e}{sensor\_id}},\ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_aa18b3d706aa82ce889e8783be9290dc7}{msg}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_aaca72591b8236fd01f120e898a09442c}{read\_value}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{mylog::LogType}}\&\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_afe38065421905ce88a1b3b3faa908db9}{log\_type}});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_add784da497920267e5874edfbfd576a9}{setDate}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_af87b9d821b9767aaff8a67137c321b29}{toString}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{LogEntry}}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a4d25cbe2a0aa279bf26057030850841a}{parseLine}}(std::string\&\ line);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{LogEntry}}\&\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_aa4a2a534c7c72f8d3d01004a6abd1b0d}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structmylog_1_1_log_entry_a84b534db11789de846bc7475019c79da}{LogEntry}}\&\ other\_log);}
+\DoxyCodeLine{00068\ \ \ \ \ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{class\ }SensorLogger\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ FILENAME;\ \textcolor{comment}{//\ <\ Stała\ przechowywująca\ nazwe\ pliku\ log.}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classmyds_1_1_linked_list}{myds::LinkedList<LogEntry>}}\ logs;\ \textcolor{comment}{//\ <\ Struktura\ przechowywująca\ logi.}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::fstream\ file;\ \textcolor{comment}{//\ <\ Strumień\ do\ pliku.}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ SensorLogger();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \string~SensorLogger();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ SensorLogger(\textcolor{keyword}{const}\ SensorLogger\&\ other\_logger)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ SensorLogger\&\ operator=(\textcolor{keyword}{const}\ SensorLogger\&\ other\_logger)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ SensorLogger\&\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_af24a8ff4386263b1940902cfc82f6cdd}{getSingleton}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_a9dc46f12e24414a262901095448783e9}{loadFromFile}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_aa3482d7c2ba9cc6ed9d31b201f4d9299}{saveToFile}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_ac19cf1040b71784f4791f16e93fdf7f7}{createLog}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ sensor\_id,\ \textcolor{keyword}{const}\ std::string\&\ msg,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ read\_value,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespacemylog_a16e0d40aea252bfce523da7a5bf54f69}{LogType}}\&\ log\_type);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_ac19cf1040b71784f4791f16e93fdf7f7}{createLog}}(\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::LogEntry}}\&\ log);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_ac19cf1040b71784f4791f16e93fdf7f7}{createLog}}(\doxymbox{\hyperlink{structmylog_1_1_log_entry}{mylog::LogEntry}}\&\&\ log);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::CustomVector<LogEntry>}}\ \doxymbox{\hyperlink{classmylog_1_1_sensor_logger_a49aa37e2ac70a523d489502d0de65cb4}{filter}}(\textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{bool}(\doxymbox{\hyperlink{structmylog_1_1_log_entry}{LogEntry}}\&)>\&\ predicate)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00143\ \ \ \ \ \};}
+\DoxyCodeLine{00144\ \}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespacemylog" kind="namespace" language="C++">
+    <compoundname>mylog</compoundname>
+    <innerclass refid="structmylog_1_1_log_entry" prot="public">mylog::LogEntry</innerclass>
+    <innerclass refid="classmylog_1_1_sensor_logger" prot="public">mylog::SensorLogger</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LogType</name>
+        <qualifiedname>mylog::LogType</qualifiedname>
+        <enumvalue id="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a8ce81acf0dfbba71ad421525a04b345d" prot="public">
+          <name>info</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a6f83a2fe78017613c275982f9982ed57" prot="public">
+          <name>debug</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemylog_1a16e0d40aea252bfce523da7a5bf54f69a3aee7f26ad0c90d83fd3a5f29c17d5cf" prot="public">
+          <name>warning</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Przechowuje informacje jaki to jest typ wiadomości info-informacja, debug-debugowanie, warning-ostrzeżenie. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/log.hpp" line="18" column="1" bodyfile="src/log.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Przestrzeń nazw przechowywująca loggera będącego singletonem. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/log.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

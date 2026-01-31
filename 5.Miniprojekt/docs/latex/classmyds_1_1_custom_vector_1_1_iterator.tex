@@ -1,0 +1,191 @@
+\doxysection{myds::\+Custom\+Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}::\+Iterator Class Reference}
+\hypertarget{classmyds_1_1_custom_vector_1_1_iterator}{}\label{classmyds_1_1_custom_vector_1_1_iterator}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+
+
+Własna implementacja iteratora do struktury \doxylink{classmyds_1_1_custom_vector}{Custom\+Vector}. Służy nam do łatwego dostępu do danych.  
+
+
+
+
+{\ttfamily \+\#include $<$ds.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} ()=delete
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny, zablokowany. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_aa0c104bb52f2d12e6b11fc0a1caf7849}{Iterator}} (T \texorpdfstring{$\ast$}{*}arr, size\+\_\+t size, bool is\+\_\+end=false)
+\begin{DoxyCompactList}\small\item\em Konstruktor inicjalizujący itearator. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_ae4bf3db1e6f1e4803941bf1c8c8440df}{next}} ()
+\begin{DoxyCompactList}\small\item\em Przechodzi do kolejnego elementu wektora. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a993711002dd38d7d156af977949db231}{operator\texorpdfstring{$\ast$}{*}}} ()
+\begin{DoxyCompactList}\small\item\em Rozpakowywuje wartość chowaną pod konkretnym elementem. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_ab1d43d9f1b5bbcd38db1b71db1cf040f}{operator\texorpdfstring{$\ast$}{*}}} () const
+\begin{DoxyCompactList}\small\item\em Rozpakowywuje wartość chowaną pod konkretnym elementem. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a018892a476108f52c7842ae23454b986}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_aab3681e1a159c5b44280b1454d1a84a6}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a9d42d8a47ad9b09eec392809780e2f3c}{operator==}} (const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \&other\+\_\+iter) const
+\begin{DoxyCompactList}\small\item\em Nadpisany operator przyrównania (==), który porównuje wartości indeksów. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a83d299d74773f92d7ed5cd7e980847cd}{operator!=}} (const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \&other\+\_\+iter) const
+\begin{DoxyCompactList}\small\item\em Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class myds::\+\+Custom\+Vector$<$ T $>$::\+\+Iterator}
+Własna implementacja iteratora do struktury \doxylink{classmyds_1_1_custom_vector}{Custom\+Vector}. Służy nam do łatwego dostępu do danych. 
+
+\label{doc-constructors}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+\+Iterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Konstruktor domyślny, zablokowany. 
+
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_aa0c104bb52f2d12e6b11fc0a1caf7849}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_aa0c104bb52f2d12e6b11fc0a1caf7849} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+\+Iterator (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{size\+\_\+t}]{size}{, }\item[{bool}]{is\+\_\+end}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor inicjalizujący itearator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Wskaźnik do tablicy. \\
+\hline
+{\em size} & Rozmiar wektora. \\
+\hline
+{\em is\+\_\+end} & Mówi nam czy tworzyć iterator do końca kontenera. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_ae4bf3db1e6f1e4803941bf1c8c8440df}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!next@{next}}
+\index{next@{next}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_ae4bf3db1e6f1e4803941bf1c8c8440df} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przechodzi do kolejnego elementu wektora. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator} do kolejnego elementu. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_a83d299d74773f92d7ed5cd7e980847cd}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_a83d299d74773f92d7ed5cd7e980847cd} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \&}]{other\+\_\+iter}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator przyrównania (!=), który porównuje wartości indeksów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+iter} & Inny iterator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prawda/\+\+Fałsz 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_a993711002dd38d7d156af977949db231}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_a993711002dd38d7d156af977949db231} 
+template$<$typename T$>$ \\
+T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rozpakowywuje wartość chowaną pod konkretnym elementem. 
+
+\begin{DoxyReturn}{Returns}
+Wartość elementu wektora. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_ab1d43d9f1b5bbcd38db1b71db1cf040f}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_ab1d43d9f1b5bbcd38db1b71db1cf040f} 
+template$<$typename T$>$ \\
+const T \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rozpakowywuje wartość chowaną pod konkretnym elementem. 
+
+\begin{DoxyReturn}{Returns}
+Wartość elementu wektora 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_a018892a476108f52c7842ae23454b986}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_a018892a476108f52c7842ae23454b986} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator inkrementacji (++iter), który przechodzi do kolejnego elementu. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator} do kolejnego elementu. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_aab3681e1a159c5b44280b1454d1a84a6}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_aab3681e1a159c5b44280b1454d1a84a6} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \& \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+operator++ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator inkrementacji (iter++), który przechodzi do kolejnego elementu. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmyds_1_1_custom_vector_1_1_iterator}{Iterator} do kolejnego elementu. 
+\end{DoxyReturn}
+\Hypertarget{classmyds_1_1_custom_vector_1_1_iterator_a9d42d8a47ad9b09eec392809780e2f3c}\index{myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!myds::CustomVector$<$ T $>$::Iterator@{myds::CustomVector$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classmyds_1_1_custom_vector_1_1_iterator_a9d42d8a47ad9b09eec392809780e2f3c} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classmyds_1_1_custom_vector}{myds::\+\+Custom\+Vector}}$<$ T $>$::\+\+Iterator::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classmyds_1_1_custom_vector_1_1_iterator_a8c5453dcd8adf50fb348eb1f4d6987b1}{Iterator}} \&}]{other\+\_\+iter}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nadpisany operator przyrównania (==), który porównuje wartości indeksów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+\_\+iter} & Inny iterator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prawda/\+\+Fałsz 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{ds_8hpp}{ds.\+hpp}}\end{DoxyCompactItemize}
